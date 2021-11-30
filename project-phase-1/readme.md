@@ -1,4 +1,4 @@
-## **Project Task: List 8**
+## **Project Phase 1: Feature 1**
 ### Name: Sourav Choudhary
 ### Student ID: N01478714
 
@@ -8,21 +8,22 @@
 * [x] Personal Travel Planner Page
 * [x] Navbar
 * [x] Drop Down Menu
-* [x] Cover Image
-* [x] Cards
-* [x] Form
+* [x] Cover Image Slider
 * [x] FAQ Accordian
 * [x] Reviews Slider
+* [x] Cards
+* [x] Form
 * [x] Footer
 * [x] CSS
 * [x] Responsiveness
 
 
 ## Learning Curve
-Learned how to add responsiveness to a webpage, added three pages and styled them using CSS
+Learned how to create a responsive web page and style them using CSS
 
 ## Resources
 * Browser: Chrome
 * IDE: VS Code
 * Icons: Font Awesome
+* Images: Unsplash.com, Pexels.com
 * Git and GitHub
