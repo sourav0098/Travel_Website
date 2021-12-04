@@ -15,11 +15,12 @@
 * [x] Form
 * [x] Footer
 * [x] CSS
+* [x] JavaScript
 * [x] Responsiveness
 
 
 ## Learning Curve
-Learned how to create a responsive web page and style them using CSS
+Learned how to create responsive web pages and style them using CSS
 
 ## Resources
 * Browser: Chrome
