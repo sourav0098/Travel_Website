@@ -1,4 +1,4 @@
-## **Project Phase 1: Feature 1**
+## **Project Phase 2**
 ### Name: Sourav Choudhary
 ### Student ID: N01478714
 
@@ -6,13 +6,14 @@
 * [x] Tour Packages Page
 * [x] Local Guides Page
 * [x] Personal Travel Planner Page
-* [x] Navbar
 * [x] Drop Down Menu
 * [x] Cover Image Slider
 * [x] FAQ Accordian
 * [x] Reviews Slider
+* [x] AJAX
+* [x] JSON
+* [x] Form Validation
 * [x] Cards
-* [x] Form
 * [x] Footer
 * [x] CSS
 * [x] JavaScript

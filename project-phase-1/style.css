@@ -8,6 +8,7 @@
   --primary: #294987;
   --black: #343a40;
   --gray: #717171;
+  --box-shadow: rgba(255, 101, 47, 0.02);
 }
 
 * {
@@ -169,7 +170,7 @@ nav {
   height: 4px;
   background: white;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.02);
+  box-shadow: 0 2px 5px var(--box-shadow);
   transition: all 0.5s ease;
 }
 .menu-btn-burger::before,
@@ -1000,6 +1001,7 @@ nav {
   border-radius: 4px;
   resize: none;
   outline: none;
+  font-family: "Roboto", sans-serif;
 }
 
 .invalid-feedback {
@@ -1050,7 +1052,7 @@ nav {
   font-weight: bold;
   font-size: 1rem;
   color: white;
-  outline:none;
+  outline: none;
 }
 
 .form-group input[type="submit"]:hover {
@@ -1065,15 +1067,15 @@ nav {
   font-family: "Roboto";
   border-radius: 5px;
 }
-.show{
+.show {
   display: flex !important;
 }
-.alert-success{
+.alert-success {
   color: #606e68;
   background-color: #d1e7dd;
   border: 1px solid #badbcc;
 }
-.alert-danger{
+.alert-danger {
   color: #842029;
   background-color: #f8d7da;
   border: 1px solid #f5c2c7;
@@ -1349,6 +1351,13 @@ nav {
 }
 
 @media screen and (max-width: 555px) {
+  .swiper{
+    height: 320px;
+  }
+  .swiper-slide h1 {
+    font-size: 2.4rem;
+  }
+
   .tour h2,
   .tour-head h2 {
     font-size: 1.2rem;
