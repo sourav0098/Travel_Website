@@ -23,6 +23,91 @@ faqs.forEach(faq => {
     })
 })
 
+// Dynamically Loading Data using AJAX 
+let xhr = new XMLHttpRequest();
+xhr.open("GET", "./data.json", true);
+xhr.onload = (() => {
+    if (xhr.status === 200) {
+        let obj = JSON.parse(xhr.responseText);
+        let tourPackages = document.getElementById("tour-packages");
+        let luxuryPackages = document.getElementById("luxury-packages");
+        let adventurePackages = document.getElementById("adventure-packages");
+        let wildlifePackages = document.getElementById("wildlife-packages");
+
+        let html1 = "";
+        let html2 = "";
+        let html3 = "";
+        let html4 = "";
+        for (key in obj.packages) {
+            html1 += `<div class="tour-card">
+                <div class="inner-tour-content-card">
+                    <img src="${obj.packages[key].image}" alt="">
+                    <p>${obj.packages[key].time}</p>
+                    <h3>${obj.packages[key].place}</h3>
+                    <p>${obj.packages[key].descreption}</p>
+                </div>
+                <div class="inner-tour-price-card">
+                    <p>from <span class="price">₹ ${obj.packages[key].price} </span>per person </p>
+                    <button>Book Now</button>
+                </div>
+            </div>`
+        }
+
+        for (key in obj.luxuryPackages) {
+            html2 += `<div class="tour-card">
+                <div class="inner-tour-content-card">
+                    <img src="${obj.luxuryPackages[key].image}" alt="">
+                    <p>${obj.luxuryPackages[key].time}</p>
+                    <h3>${obj.luxuryPackages[key].place}</h3>
+                    <p>${obj.luxuryPackages[key].descreption}</p>
+                </div>
+                <div class="inner-tour-price-card">
+                    <p>from <span class="price">₹ ${obj.luxuryPackages[key].price} </span>per person </p>
+                    <button>Book Now</button>
+                </div>
+            </div>`
+        }
+
+        for (key in obj.adventurePackages) {
+            html3 += `<div class="tour-card">
+                    <div class="inner-tour-content-card">
+                    <img src="${obj.adventurePackages[key].image}" alt="">
+                        <p>${obj.adventurePackages[key].time}</p>
+                        <h3>${obj.adventurePackages[key].place}</h3>
+                        <p>${obj.adventurePackages[key].descreption}</p>
+                    </div>
+                    <div class="inner-tour-price-card">
+                        <p>from <span class="price">₹ ${obj.adventurePackages[key].price} </span>per person </p>
+                        <button>Book Now</button>
+                    </div>
+                </div>`
+        }
+
+        for (key in obj.wildlifePackages) {
+            html4 += `<div class="tour-card">
+                    <div class="inner-tour-content-card">
+                        <img src="${obj.wildlifePackages[key].image}" alt="">
+                        <p>${obj.wildlifePackages[key].time}</p>
+                        <h3>${obj.wildlifePackages[key].place}</h3>
+                        <p>${obj.wildlifePackages[key].descreption}</p>
+                    </div>
+                    <div class="inner-tour-price-card">
+                        <p>from <span class="price">₹ ${obj.wildlifePackages[key].price} </span>per person </p>
+                        <button>Book Now</button>
+                    </div>
+                </div>`
+        }
+        tourPackages.innerHTML = html1;
+        luxuryPackages.innerHTML = html2;
+        adventurePackages.innerHTML = html3;
+        wildlifePackages.innerHTML = html4;
+    }
+    else {
+        console.log("Error! Not Found");
+    }
+})
+xhr.send();
+
 // Form Validation
 const userName = document.getElementById("name");
 const email = document.getElementById("email");
