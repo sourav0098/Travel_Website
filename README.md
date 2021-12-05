@@ -1,5 +1,12 @@
-# project-achievers
-We are designing a website for an event management company which will organize the events and provide different 
-services to the customer like Venue booking, Catering, Accomodation, Transportation. Customer will get a number
-of options in each of the above services.
-project-achievers created by GitHub Classroom
+# project-task-lists-n01472003
+project-task-lists-n01472003 created by GitHub Classroom
+
+Name : Ankit Saini 
+ID : N01472003
+Email : N01472003@humbermail.ca
+
+Project Task 1: Home page completed with html,css and javascript. mainU.html is the file for the home page along with offer.html which has a live countdown to 
+show the below offers availabilty . 
+Project Task 2:Contact.html is complete . Its a contact form with the validation functionality. I have added box border coloring(for error and success) to make 
+it more appealing to eyes. 
+

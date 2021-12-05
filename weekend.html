@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styleWeek.css" />
+    <link rel="stylesheet" href="styleU.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navbar-top">
+          <div class="nav-inner-container">
+            <a href="./index.html"
+              ><img src="/Images/logo/logo.png" alt="" srcset=""
+            /></a>
+            <h2>Mosaic Planners</h2>
+          </div>
+          <div class="nav-button-container">
+            <button>Register</button>
+            <button>Sign In</button>
+          </div>
+        </div>
+        <ul class="navbar-bottom">
+          <li>
+            <a href="#" alt="Home"><i class="fas fa-home"></i> Home</a>
+            <ul>
+              <li><a href="">Event Booking</a></li>
+              <li><a href="">Corporate Booking</a></li>
+              <li><a href="">Help Desk</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="mainU.html" alt="Food"
+              ><i class="fas fa-utensils"></i> Food</a
+            >
+            <ul>
+              <li><a href="offer.html">Offers</a></li>
+              <li><a href="weekend.html">Weekend Getaways</a></li>
+              <li><a href="contact.html">Helpdesk</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" alt="Accommodation"
+              ><i class="fas fa-bed"></i> Accommodation</a
+            >
+            <ul>
+              <li><a href="">Hotel Booking</a></li>
+              <li><a href="">Motel Booking</a></li>
+              <li><a href="">Rental Apartments</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" alt="Transportation"
+              ><i class="fas fa-taxi"></i> Transportation</a
+            >
+            <ul>
+              <li><a href="">Flight Booking</a></li>
+              <li><a href="">Train Booking</a></li>
+              <li><a href="">Roadway Booking</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" alt="Tourism"
+              ><i class="fas fa-globe-americas"></i> Tourism</a
+            >
+            <ul>
+              <li><a href="./touristpackages.html">Tourist Packages</a></li>
+              <li><a href="./localguides.html">Local Guides</a></li>
+              <li><a href="./travelplanner">Personal Travel Planner</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <h1>Food to explore this weekend</h1>
+      <div class="weekcontainer">
+        <div class="menu1">
+          <img src="/Images/thai.jpg" />
+          <ul>
+            Best Thai Restaurants to visit
+          </ul>
+          <li>
+            <a href="https://www.thaibarbq.com/">Thai BBQ</a>
+            <div class="modal-content" id="modal-content">
+              <p>◼◻◼◻Reservation Form◼◻◼◻</p>
+              <button class="close-btn" id="close">❌</button>
+              <form class="modal-form">
+                <div>
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter Name"
+                    class="form-input"
+                  />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter Email"
+                    class="form-input"
+                  />
+                </div>
+                <input
+                  type="submit"
+                  value="Submit✅"
+                  class="submit-btn"
+                  id="sbmt"
+                  onclick="myFunction()"
+                />
+              </form>
+            </div>
+            <button type="button" id="open">Make Reservation</button>
+          </li>
+          <li>
+            <a href="">Khanom Corner</a>
+            <div class="modal-content" id="modal-content">
+              <p>◼◻◼◻Reservation Form◼◻◼◻</p>
+              <button class="close-btn" id="close">❌</button>
+              <form class="modal-form">
+                <div>
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter Name"
+                    class="form-input"
+                  />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter Email"
+                    class="form-input"
+                  />
+                </div>
+                <input
+                  type="submit"
+                  value="Submit✅"
+                  class="submit-btn"
+                  id="sbmt"
+                  onclick="myFunction()"
+                />
+              </form>
+            </div>
+            <button type="button">Make Reservation</button>
+          </li>
+          <li>
+            <a href="">The Garden Thai</a>
+            <button type="button">Make Reservation</button>
+          </li>
+        </div>
+        <div class="menu1">
+          <img src="/Images/indian.jpg" />
+          <ul>
+            Must visit Indian Cuisine
+          </ul>
+          <li>
+            <a href="">Food Village</a>
+            <button type="button">Make Reservation</button>
+          </li>
+          <li>
+            <a href="">Brothers Dhaba</a>
+            <button type="button">Make Reservation</button>
+          </li>
+          <li>
+            <a href="">Haveli</a>
+            <button type="button">Make Reservation</button>
+          </li>
+        </div>
+        <div class="menu1">
+          <img src="/Images/indo-chinese-food.jpg" />
+          <ul>
+            Chinese - You cant resist
+          </ul>
+          <li>
+            <a href="">Yo! China</a
+            ><button type="button">Make Reservation</button>
+          </li>
+          <li>
+            <a href="">Wow </a> <button type="button">Make Reservation</button>
+          </li>
+          <li>
+            <a href="">Mainland China</a>
+            <button type="button">Make Reservation</button>
+          </li>
+        </div>
+        <div class="menu1">
+          <img src="/Images/canadian.jpg" />
+          <ul>
+            Traditional Canadian
+          </ul>
+          <li>
+            <a href="">Richmond Station</a>
+            <button type="button">Make Reservation</button>
+          </li>
+          <li>
+            <a href="">Bannock</a>
+
+            <button type="button">Make Reservation</button>
+          </li>
+
+          <li>
+            <a href="">EggSpectation</a>
+            <div class="modal-content" id="modal-content">
+              <p>◼◻◼◻Reservation Form◼◻◼◻</p>
+              <button class="close-btn" id="close">❌</button>
+              <form class="modal-form">
+                <div>
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter Name"
+                    class="form-input"
+                  />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter Email"
+                    class="form-input"
+                  />
+                </div>
+                <input
+                  type="submit"
+                  value="Submit✅"
+                  class="submit-btn"
+                  id="sbmt"
+                  onclick="myFunction()"
+                />
+              </form>
+            </div>
+
+            <button type="button" id="open">Make Reservation</button>
+          </li>
+        </div>
+        <script src="weekend.js"></script>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      <div class="social">
+        <a href="#"><i class="icon ion-social-instagram"></i></a>
+        <a href="#"><i class="icon ion-social-snapchat"></i></a>
+        <a href="#"><i class="icon ion-social-twitter"></i></a>
+        <a href="#"><i class="icon ion-social-facebook"></i></a>
+      </div>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Home</a></li>
+        <li class="list-inline-item"><a href="#">Services</a></li>
+        <li class="list-inline-item"><a href="#">About</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+      </ul>
+      <p class="copyright">Mosaic Planners © 2021</p>
+    </footer>
+  </body>
+</html>
