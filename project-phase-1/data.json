@@ -152,24 +152,117 @@
       "place": "Gir and Diu",
       "descreption": "Enjoy the safari at Gir National Park, Visit Nagoa Beach, St Paul's Church and much more",
       "price": "13999"
-    },{
+    },
+    {
       "image": "./images/wildlife-2.jpg",
       "time": "India | 7 days",
       "place": "Rathambore Adventure Tour",
       "descreption": "Rathambore National Park, Ganesh Temple, Rathambore Fort, Jeep Ride",
       "price": "16999"
-    },{
+    },
+    {
       "image": "./images/wildlife-3.jpg",
       "time": "India | 9 days",
       "place": "Nainital, Corbett and Mussoorie Package",
       "descreption": "Jeep Ride, Eco Cave Garden, Nainital Zoo, Jim Corbett National Park, Naini Lake",
       "price": "21999"
-    },{
+    },
+    {
       "image": "./images/wildlife-4.jpg",
       "time": "India | 7 days",
       "place": "Sundarban Wildlife Expedition",
       "descreption": "Sunrise to Sunset Main Focus on Tiger Tracking, Birding, Tribal Dance, Thrilling boat safari",
       "price": "17499"
+    }
+  ],
+  "localGuides": [
+    {
+      "image": "./images/guide_1.jpg",
+      "name": "Ashwin Kumar",
+      "rating": "4.5",
+      "quality": [
+        "Focuses on unique cultural experiences",
+        "Familiar with Volunteerism and Charity driven tours",
+        "Qualified in North and South India"
+      ]
+    },
+    {
+      "image": "./images/guide_2.jpg",
+      "name": "Balbir Singh",
+      "rating": "4.4",
+      "quality": [
+        "Religious (Recommends to explore Amritsar)",
+        "Family and group tours to North India",
+        "Loves to Chat/Talk"
+      ]
+    },
+    {
+      "image": "./images/guide_3.jpg",
+      "name": "Divya Sharma",
+      "rating": "4.6",
+      "quality": [
+        "Mystic Mountain Tour of Leh & Ladakh",
+        "Trekking Tour",
+        "Tribal Tour"
+      ]
+    },
+    {
+      "image": "./images/guide_4.jpg",
+      "name": "Rohit Sharma",
+      "rating": "4.5",
+      "quality": ["Cultural Tours", "Family Tours", "Off Beat Tours"]
+    },
+    {
+      "image": "./images/guide_5.jpg",
+      "name": "Shubham Gupta",
+      "rating": "4.3",
+      "quality": [
+        "Niche and Special interest",
+        "Wildlife and Nature",
+        "Tours focused on community development"
+      ]
+    },
+    {
+      "image": "./images/guide_7.jpg",
+      "name": "Vishal Mishra",
+      "rating": "4.6",
+      "quality": [
+        "Experiential Travel",
+        "Offbeat Destinations",
+        "Bespoke Travel"
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "image": "./images/avatar1.png",
+      "name": "Akash Kumar",
+      "descreption": "Just got back from a wonderful trip and it was a great experience overall. The travel designer was easy to work with from the beginning. We received multiple itineraries from multiple groups, but the one from this company was the most flexible. Since ours was a private tour, the travel designer took the time to customize the schedule so we get to see the most we can while still feeling rested and relaxed"
+    },
+    {
+      "image": "./images/avatar2.png",
+      "name": "Priyank Sharma",
+      "descreption": "This was our first trip and the experience could not have turned out better. First, the agents that they recommended were attentive and experienced in their efforts to determine what we wanted out of our trip and to make it happen to meet our expectations. The most difficult part of the planning process was having to make a choice of which agent to choose. They were both excellent in their planning and their proposals."
+    },
+    {
+      "image": "./images/avatar3.png",
+      "name": "Raghu Suri",
+      "descreption": "Our trip was truly a once-in-a-lifetime experience and we are so grateful to everyone that made it happen seamlessly. Our travel planner, Rahul was incredible. After reading our initial request and speaking with us on the phone, he designed a tour perfectly custom to what our interests were. He was always prompt and thorough in his responses and we felt very comfortable taking his recommendations"
+    },
+    {
+      "image": "./images/avatar4.png",
+      "name": "Ridhi Dogra",
+      "descreption": "Mosaic Planers organised our visit to Kerala. They put together an itinerary that suited us. We wanted to be more off the beaten track but still comfortable. Our stays at coffee and tea plantations, safari lodge, a beach resort and houseboat on the North Kerala backwaters, were delightful and exceeded our expectations. The underlying organisation of the trip meant we had no worries about where we should be and how we should get there"
+    },
+    {
+      "image": "./images/avatar5.png",
+      "name": "Sanjay Kumar",
+      "descreption": "We had a wonderful holiday in Rajasthan which will remain long in the memory. India is a breathtakingly beautiful country full of splendid temples and palaces, noise and colour, peaceful rural scenes and most of all friendly welcoming people. We stayed in some amazing hotels and had brilliant guides who made us feel like friends. Even the noise and bustle is an experience in itself and we enjoyed the contrast between the busy streets, quiet hotels and rural experiences."
+    },
+    {
+      "image": "./images/avatar6.png",
+      "name": "Neha Sharma",
+      "descreption": "We started with a few days in Mumbai & ended in Delhi, from where we visited the Taj Mahal. In between we visited Bhopal and Satpura and Kanha National Parks. It was a good mixture given the contrast between the busy cities & quiet beautiful national parks. We particularly liked the peacefulness & variety of wildlife in the countryside. The accommodation & guides were excellent throughout our stay"
     }
   ]
 }
