@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <script src="https://kit.fontawesome.com/dc0fc0f185.js" crossorigin="anonymous"></script>
   <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="HomePage.css">
   
 </head>
@@ -21,14 +22,15 @@
         </div>
         <div class="nav-button-container">
             <a href="../SignUp/SignUp.html"><button >Register</button></a>
-            <button>Sign In</button>
+            
+            <button id="review-add-btn2">Sign In</button>
         </div>
     </div>
     <ul class="navbar-bottom">
         <li><a href="#" alt="Home"><i class="fas fa-home"></i> Home</a>
             <ul>
                 <li><a href="">Event Booking</a></li>
-                <li><a href="">Corporate Booking</a></li>
+                <li><a href="">About Us</a></li>
                 <li><a href="">Help Desk</a></li>
             </ul>
         </li>
@@ -105,7 +107,7 @@
 
  
 </table> 
-<input type="submit" class="custom-btn btn-6" value="Enquire" onclick="SignUpError()"><span>Inquiry</span>
+<input type="submit" class="custom-btn btn-6" value="Enquire" onclick="SignUpError()"><span></span>
 <label class="image_label">Take a closer look to the events we hosted</label><br>
 <span><a href="#"></a></span>
 <div class="image-row">
@@ -167,9 +169,41 @@
     </form>
   </div>
 </div>
+
 <div class="modal-overlay"></div>
   
   <a href="" class="bottom-queries">Contact us for any queries</a>
+  
+  
+  <div class="modal-overlay2"></div>
+
+  <!-- <h2>Add Review</h2>
+  <button id="review-add-btn2" aria-label="add review" ></button> -->
+  <div id="modal2" role="dialog" aria-modal="true" aria-labelledby="add-review-header" class="">
+    <button class="close-btn2" aria-label="close" title="Close">x</button>
+    <div id="review-form2-container">
+      <h2 id="add-review-header">Sign Up</h2>
+      <form id="review-form2">
+        <div class="fieldset2">
+          <label for="username">Username</label>
+          <input name="username" id="username" required="">
+        </div>
+        <div class="fieldset2">
+          <!-- <div class="rate">
+           </div> -->
+        </div>
+  
+        <div class="fieldset2">
+          <label for="Loginpassword">Password</label>
+          <input name="Loginpassword" id="Loginpassword" required="">
+        </div>
+        <div class="fieldset2right">
+          <button id="submit-login-btn">Sign In</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
 <div class="footer-basic">
     <footer>
         <div class="social">
