@@ -91,10 +91,17 @@
            
         </div>
         <div class="ipt_con">
-
-            <input type="text" placeholder="Where from?" class="ipt1">
+            <!--<select name="" id="" class="ipt1">
+                <option value="Banglore">Banglore</option>
+                <option value="dehli">dehli</option>
+            </select>
+            <select name="" id="" class="ipt2">
+                <option value="Banglore">Banglore</option>
+                <option value="dehli">dehli</option>
+            </select>-->
+           <input type="text" placeholder="Where from?" class="ipt1">
             <input type="text" placeholder="Where to?" class="ipt2">
-            <input type="date" class="ipt3">
+            <input type="date" class="ipt3" >
             <select class="hk">
                 <option value="Shandong Airlines">Shandong Airlines</option>
                 <option value="Xiamen Airlines">Xiamen Airlines</option>
@@ -102,7 +109,7 @@
             </select>
         </div>
         <div class="banner_btn">
-            <!--<button class="btn1">Search Flight + Hotel</button>-->
+            
             <button class="btn2">Search Flights</button>
         </div>
         <div class="banner_con_text">Please contact us in case of difficulties</div>
@@ -139,7 +146,7 @@
                 NAME: <span>XXXXXXX</span> <br><br>
                 cell-phon: <span>XXXXXXX</span> <br><br>
                 Airline company: <span class="hgs">Shandong Airlines</span> <br><br>
-                Cockpit: <span class="Cockpit">XXXXXXX</span> <br><br>
+                Cockpit: <span class="Cockpit">XXXXX</span> <br><br>
             </div>
             <div>
                 place of departure: <span class="cf">XXXXXXX</span> <br><br>
@@ -149,7 +156,6 @@
             <div>
                 Flight mode: <span class="Flight">Return</span> <br><br>
                 model: <span>KK747C</span> <br><br>
-                airline company: <span>XXXX</span> <br><br>
                 Oil cost: <span>$100</span> <br><br>
                 air fare: <span>$300</span> <br><br>
             </div>
@@ -160,15 +166,14 @@
             <div class="plane_btn2">buy</div>
         </div>
     </div>
-    <div class="userInfor" style="display: none">
+    <div class="userInfor" style="display: none" >
         <div class="userInfor_title">Identity information</div>
-        <div><input type="text" placeholder="Enter name"></div>
-        <div><input type="text" placeholder="Enter email address"></div>
-        <div><input type="text" placeholder="Enter phone"></div>
-        <div><input type="text" placeholder="Enter passport number"></div>
-        <div class="bottom_btn">
-            Submit
-        </div>
+        <div><input type="text" placeholder="Enter name" id="name"><span id="nameError"></span></div>
+        <div><input type="text" placeholder="zhangsan@163.com" id="email"><span id="emailError"></span></div>
+        <div><input type="text" placeholder="Enter phone" id="phone"><span id="phoneError"></span></div>
+        <div><input type="text" placeholder="Enter passport number" id="pst"><span id="pstError"></span></div>
+        <input type="button" id="submit" class="bottom_btn" value="Purchase">
+
     </div>
 </div>
 <script src="js/index.js"></script>
