@@ -1,0 +1,161 @@
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    background: #294987;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .navbar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 36px;
+  }
+  
+  .navbar-top img {
+    height: 67px;
+    padding: 2px 7px;
+    transform: rotate(12deg);
+    filter: brightness(1.05);
+  }
+  
+  .navbar-top button {
+    cursor: pointer;
+    border: none;
+    background: white;
+    color: #294987;
+    font-family: "Roboto", sans-serif;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin: 0 4px;
+  }
+  
+  .navbar-top button:hover {
+    background: #eef4ff;
+  }
+  
+  .nav-inner-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-inner-container h2 {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 1.9rem;
+  }
+  
+  .navbar-bottom {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .navbar-bottom li {
+    list-style: none;
+  }
+  
+  .navbar-bottom li a {
+    display: inline-block;
+    padding: 8px 42px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .navbar-bottom li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    z-index: 2;
+    background: #294987;
+  }
+  
+  .navbar-bottom li:hover {
+    background-color: hsla(0, 0%, 100%, 0.06);
+  }
+  
+  .navbar-bottom li:hover > ul {
+    display: block;
+  }
+  
+  .fas {
+    padding-right: 3px;
+  }
+
+ .big {
+   height: 120px;
+   background-color: #294987;
+   font-size: 40px;
+   color: orange;
+   font-weight: 800;
+   text-decoration: overline;
+   text-align: center;
+   line-height: 160px;
+   word-spacing: 15px;
+  
+ }
+
+  .second {
+   display: flex;
+   justify-content: center;
+   background-color: rgb(255, 255, 255);
+
+   
+ }
+ .bigger {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  
+  
+ }
+ .bigger div {
+  display:inline-block;
+  width: 508px;
+  height: 550px;
+  margin: 10px auto;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  background-color:  crimson ;
+  border: 4px solid rgb(247, 198, 4);
+  border-radius: 8px;
+ }
+ .second div {
+   display:inline-block;
+   width: 508px;
+   height: 550px;
+   margin: 10px auto;
+   font-size: 20px;
+   font-weight: 800;
+   text-align: center;
+   background-color: crimson;
+   border: 4px solid rgb(247, 198, 4);
+  border-radius: 8px;
+   
+   /*border: 4px solid rgb(0, 0, 0);*/
+ }
+ a {
+   text-decoration: none;
+   color:rgb(247, 198, 4) ;
+ }
+ p {
+   margin-top: 35px;
+   color: rgb(247, 198, 4);
+ }
+ 
+  a:hover {
+    color:white;
+  }
+ 
