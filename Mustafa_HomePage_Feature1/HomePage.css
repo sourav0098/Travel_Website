@@ -1,0 +1,886 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    min-height: auto;
+    min-width: auto;
+    
+  }
+  body{
+    background-image: url("Home_BG.jpg");
+    /* background-size:cover;  */
+    background-size: 1520px 800px;
+    background-repeat: no-repeat;
+    
+  }
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    padding: 10px 25px;
+    margin-left: 50%;
+    margin-top: 35px; 
+    border: 2px solid #000;
+    /* color: white; */
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 25px;
+    display: inline-block;
+  }
+.btn-6 {
+   color: #fff;
+   background-color: rgb(218, 94, 94);
+   line-height: 42px;
+   padding: 0;
+   border: none;
+ }
+ .btn-6 span {
+   position: relative;
+   display: block;
+   width: 100%;
+   height: 100%;
+ }
+ .btn-6:before,
+ .btn-6:after {
+   position: absolute;
+   content: "";
+   height: 0%;
+   width: 2px;
+   background: #000;
+ }
+ .btn-6:before {
+   right: 0;
+   top: 0;
+   transition: all 500ms ease;
+ }
+ .btn-6:after {
+   left: 0;
+   bottom: 0;
+   transition: all 500ms ease;
+ }
+ .btn-6:hover{
+   color: rgb(218, 94, 94);
+   border:solid 2px;
+   background: transparent;
+ }
+ .btn-6:hover:before {
+   transition: all 500ms ease;
+   height: 100%;
+ }
+ .btn-6:hover:after {
+   transition: all 500ms ease;
+   height: 100%;
+ }
+ .btn-6 span:before,
+ .btn-6 span:after {
+   position: absolute;
+   content: "";
+   background: transparent;
+ }
+ .btn-6 span:before {
+   left: 0;
+   top: 0;
+   width: 0%;
+   height: 2px;
+   transition: all 500ms ease;
+ }
+ .btn-6 span:after {
+   right: 0;
+   bottom: 0;
+   width: 0%;
+   height: 2px;
+   transition: all 500ms ease;
+ }
+ .btn-6 span:hover:before {
+   width: 100%;
+ }
+ .btn-6 span:hover:after {
+   width: 100%;
+ }
+  .AddReview {
+    display: inline-block;
+    margin-left: 500px;
+    margin-top: 40px;
+    font-size: 24px;
+    color: #294987;
+  }
+  #review-add-btn {
+    padding: 0;
+    font-size: 1.6em;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: white;
+    border-color:#294987;
+    color: #294987;
+    /* height: 50px; */
+  }
+
+  
+  #modal {
+    
+    position: fixed;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* end css tricks */
+    /* z-index: -10; */
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    /* width: 80vw; */
+    /* height: 80vh; */
+    border: 1px solid #666;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all .3s;
+    overflow: hidden;
+    background-color: #eee;
+    /* visibility: hidden; */
+    display: none;
+  }
+  #modal.show {
+    /* visibility: visible;   */
+    opacity: 1;
+    /* z-index: 10; */
+    display: flex;
+  }
+  .modal-overlay {
+    width: 100%;
+    height: 100%;
+    z-index: 2; 
+    background-color: #000;
+    opacity: 0;
+    transition: all .3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+  .modal-overlay.show {
+    display: block;
+    opacity: 0.5;  
+  }
+  #modal .close-btn,.close-btn2 {
+    border: 1px #fff;
+    background-color: #fff;
+    align-self: flex-end;
+    font-size: 1.4em;
+    margin: 8px 8px 0;
+    padding: 0 8px;
+    cursor: pointer;
+  }
+  .review-form {
+    max-width: 900px;
+    padding: 0 20px 20px 20px;
+    
+  }
+  .fieldset{
+    margin-left: 40px;
+  }
+  
+  .rate, textarea { /*button*/
+    background: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    /* border-radius: 8px; */
+    box-shadow: inset 0 1px 1px #e1e1e1;
+    font-size: 16px;
+    padding: 8px;
+  }
+  
+  button {
+    min-width: 48px;
+    min-height: 48px;
+  }
+  button:hover {
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  button#review-add-btn, 
+  button.close-btn, 
+  button#submit-review-btn {
+    min-height: 40px;
+  }
+  button#submit-review-btn {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 16px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .fieldset {
+    margin-top: 20px;
+  }
+  .right {
+    align-self: flex-end;
+  }
+  #review-form-container {
+    width: 100%;
+    /* background-color: #eee; */
+    padding: 0 20px 26px;
+    color: #333;
+    overflow-y: auto;
+  }
+  #review-form-container h2 {
+    margin: 0 0 0 6px;
+  }
+  #review-form {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+  }
+  #review-form label, #review-form input {
+    display: block;
+    /* width: 100%; */
+  }
+  #review-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  #review-form .rate label, #review-form .rate input,
+  #review-form .rate1 label, #review-form .rate1 input {
+    display: inline-block;
+  }
+  
+  .rate {
+    /* float: left; */
+    /* display: inline-block; */
+    height: 36px;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  #review-form .rate > label {
+    margin-bottom: 0;
+    margin-top: -5px;
+    height: 30px;
+  }
+  .rate:not(:checked) > input {
+    /* position: absolute; */
+    top: -9999px;
+    margin-left: -24px;
+    width: 20px;
+    padding-right: 14px;
+    z-index: -10;
+  }
+  .rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+  }
+  /* #star1:focus{
+  
+  } */
+  .rate2 {
+    float: none;
+  }
+  .rate:not(:checked) > label::before {
+    content: '★ ';
+    position: relative;
+    top: -10px;
+    left: 2px;
+  }
+  .rate > input:checked ~ label {
+    color: #ffc700;
+    
+  }
+  .rate > input:checked:focus + label, .rate > input:focus + label {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+  .rate:not(:checked) > label:hover,
+  .rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+    
+  }
+  .rate > input:checked + label:hover,
+  .rate > input:checked + label:hover ~ label,
+  .rate > input:checked ~ label:hover,
+  .rate > input:checked ~ label:hover ~ label,
+  .rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+  }
+  #submit-review {
+    align-self: flex-end;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    background: #294987;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .navbar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 36px;
+  }
+  
+  .navbar-top img {
+    height: 67px;
+    padding: 2px 7px;
+    transform: rotate(12deg);
+    filter: brightness(1.05);
+  }
+  
+  .navbar-top button {
+    cursor: pointer;
+    border: none;
+    background: white;
+    color: #294987;
+    font-family: "Roboto", sans-serif;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin: 0 4px;
+  }
+  
+  .navbar-top button:hover {
+    background: #eef4ff;
+  }
+  
+  .nav-inner-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-inner-container h2 {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 1.9rem;
+  }
+  
+  .navbar-bottom {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .navbar-bottom li {
+    list-style: none;
+  }
+  
+  .navbar-bottom li a {
+    display: inline-block;
+    padding: 8px 42px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .navbar-bottom li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    z-index: 2;
+    background: #294987;
+  }
+  
+  .navbar-bottom li:hover {
+    background-color: hsla(0, 0%, 100%, 0.06);
+  }
+  
+  .navbar-bottom li:hover > ul {
+    display: block;
+  }
+  
+  .fas {
+    padding-right: 3px;
+  }
+  table{
+    margin-left: 30%;
+    margin-top: 20%;
+    
+  }
+  
+  select{
+    height: 125px;
+    font-size: 25px;
+    color: white;
+    background-color: rgba(0,0,0,.5);
+  }
+  input.inquire{
+    height: 25px;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(218, 94, 94); 
+    height:50px ;
+    width: 100px;
+    margin-left: 40%;
+    margin-top: 15px;
+  }
+  
+  input.StartDate{
+    height: 125px;
+    font-size: 25px;
+    color: white;
+    background-color: rgba(0,0,0,.5);
+    
+  }
+
+  span{
+    
+    display: inline-flex;
+    height: 55px;
+    width: 180px;
+    margin: 0 15px;
+    perspective: 1000px;
+    margin-left: 1330px;
+  }
+  span a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  span a:before,
+  span a:after{
+    position: absolute;
+    content: "View all";
+    height: 55px;
+  width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid  #fff; 
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  span a:before{
+    color: #294987;
+    
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  span a:after{
+    color:  #fff;
+    transform: rotateX(90deg) translateZ(25px);
+    background: #294987;
+  }
+  span a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+
+  .image_label
+  {
+    margin-left: 500px;
+    margin-top: 200px;
+    color: #294987;
+    font-family: "Brush Script MT", sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    
+  }
+
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    margin-top: 5px;
+    
+  }
+  .column2 {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    
+    
+  }
+  .picture{
+    border-radius: 25px;
+    height: 500px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .image-row::after {
+    content: "";
+    clear: both;
+    display: table;
+    
+  }
+
+  .bottom-queries
+  {
+    color: #294987;
+    margin-left: 300px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  
+
+  .footer-basic {
+    /* padding:15px 0 0 0; */
+    padding-top: 2px;
+    margin-top: 100px;
+    min-width: 700px;
+    max-width: 1530px;
+    max-height: 80px;
+    color:#fefeff;
+    text-align: center;
+    /* margin-bottom: 0%;
+    margin-left: 30%; */
+    width: 100%;
+    background-color:#294987;
+    
+  }
+  
+  .footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:10px;
+    line-height:5px;
+    
+  }
+  
+  .footer-basic li {
+    padding:3px;
+  }
+  
+  .footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:3px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin:0 4px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:-8px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+  }
+
+  
+
+
+  .LoginPage {
+    display: none;
+    z-index: 20;
+    /* position: fixed; */
+    background-color: #FFFFFF;
+    width: 400px;
+    height: 500px;
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+  }
+  
+  .Login-sign {
+    padding-top: 60px;
+    color: #294987;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+  }
+  
+  .un {
+  width: 76%;
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgba(136, 126, 126, 0.04);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-bottom: 50px;
+  margin-left: 46px;
+  text-align: center;
+  margin-bottom: 27px;
+  font-family: 'Ubuntu', sans-serif;
+  }
+  
+  form.LoginForm {
+    padding-top: 40px;
+  }
+  
+  .pass {
+        width: 76%;
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgba(136, 126, 126, 0.04);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-bottom: 50px;
+  margin-left: 46px;
+  text-align: center;
+  margin-bottom: 27px;
+  font-family: 'Ubuntu', sans-serif;
+  }
+  
+  
+  .un:focus, .pass:focus {
+    border: 2px solid rgba(0, 0, 0, 0.18) !important;
+    
+  }
+  
+  .LoginSubmit {
+  cursor: pointer;
+    border-radius: 5em;
+    color: #f7f9fc;
+    /* background: linear-gradient(to right, #9C27B0, #E040FB); */
+    background-color: #294987;
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 35%;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  }
+  
+  .forgot {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #294987;
+    padding-top: 55px;
+  }
+  
+  .LoginSubmit {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #294987;
+    text-decoration: none
+  }
+  
+  @media (max-width: 600px) {
+    .LoginPage {
+        border-radius: 0px;
+    }
+  }
+  
+  
+  #add-review-header
+  {
+    color: #294987;
+  }
+  #review-add-btn {
+    padding: 0;
+    font-size: 1.6em;
+    cursor: pointer;
+  }
+  /* ====================== Review Form ====================== */
+  #modal2 {
+    /* position: absolute;
+    left: 10vh;
+    top: 10vh; */
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 300px;
+    /* end css tricks */
+    /* z-index: -10; */
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    /* width: 80vw; */
+    /* height: 80vh; */
+    border: 1px solid #666;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all .3s;
+    overflow: hidden;
+    background-color:white;
+    /* visibility: hidden; */
+    display: none;
+  }
+  #modal2.show {
+    /* visibility: visible;   */
+    opacity: 1;
+    /* z-index: 10; */
+    display: flex;
+  }
+  .modal-overlay2 {
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* places the modalOverlay between the main page and the modal dialog */
+    background-color: #000;
+    opacity: 0;
+    transition: all .3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+  .modal-overlay2.show {
+    display: block;
+    opacity: 0.5;  
+  }
+  #modal2 .close-btn {
+    align-self: flex-end;
+    font-size: 1.4em;
+    margin: 8px 8px 0;
+    padding: 0 8px;
+    cursor: pointer;
+  }
+  /* form {
+    max-width: 900px;
+    padding: 0 20px 20px 20px;
+  } */
+  /* 
+  input,
+  label {
+    display: block;
+    width: 100%;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  } */
+  
+  /* input, */
+  /* input:not(input[type='radio']), */
+  /* input:not(type='radio'), */
+   /* textarea{
+    background: #f9f9f9;
+    border: 1px solid #294987;
+    border-radius: 8px;
+    box-shadow: inset 0 1px 1px #e1e1e1;
+    font-size: 16px;
+    padding: 8px;
+  } */
+  /* input[type="radio"] {
+    box-shadow: none;
+  } */
+  button {
+    min-width: 48px;
+    min-height: 48px;
+  }
+  button:hover {
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  button#review-add-btn, 
+  button.close-btn, 
+  button#submit-login-btn {
+    min-height: 40px;
+  }
+  #submit-login-btn{
+    cursor: pointer;
+    border-radius: 5em;
+    color: #f7f9fc;
+    /* background: linear-gradient(to right, #9C27B0, #E040FB); */
+    background-color: #294987;
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    font-weight: bold;
+  }
+  
+  .fieldset2 {
+    margin-top: 20px;
+    color: #294987;
+    margin-left: 20px;
+  }
+  .fieldset2right {
+    /* align-self: flex-end; */
+    margin-left: 70px;
+    margin-top: 60px;
+  }
+  #review-form2-container {
+    width: 100%;
+    /* background-color: #eee; */
+    /* padding: 0 20px 26px; */
+    color: #333;
+    overflow-y: auto;
+    
+  }
+  #review-form2-container h2 {
+    margin: 0 0 0 6px;
+  }
+  #review-form2 {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+   
+  }
+  #review-form2 label, #review-form2 input {
+    display: block;
+    /* width: 100%; */
+  }
+  #review-form2 label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  #review-form2 .rate label, #review-form2 .rate input,
+  #review-form2 .rate1 label, #review-form2 .rate1 input {
+    display: inline-block;
+  }
+  /* Modified from: https://codepen.io/tammykimkim/pen/yegZRw */
+
+  #submit-review {
+    align-self: flex-end;
+  }
