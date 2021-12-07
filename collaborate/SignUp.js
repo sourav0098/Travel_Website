@@ -28,7 +28,7 @@ function formValidation() {
     return false;
   }
     // checking reentered password is matching with the above entered password
-  if (!password2.value.match(password.value)) {
+  if (!password2.value == password.value) {
     alert(" Reentered Password Does not match ");
     password2.focus();
     return false;
