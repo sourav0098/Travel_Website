@@ -14,6 +14,7 @@
   
 </head>
 <body>
+  <header>
   <nav>
     <div class="navbar-top">
         <div class="nav-inner-container">
@@ -21,7 +22,7 @@
             <h2>Mosaic Planners</h2>
         </div>
         <div class="nav-button-container">
-            <a href="../SignUp/SignUp.html"><button >Register</button></a>
+            <a href="SignUp.html" target="_blank"><button >Register</button></a>
             
             <button id="review-add-btn2">Sign In</button>
         </div>
@@ -29,7 +30,7 @@
     <ul class="navbar-bottom">
         <li><a href="#" alt="Home"><i class="fas fa-home"></i> Home</a>
             <ul>
-                <li><a href="">Event Booking</a></li>
+                <li><a href="HomePage.html">Event Booking</a></li>
                 <li><a href="">About US</a></li>
                 <li><a href="">Help Desk</a></li>
             </ul>
@@ -66,9 +67,12 @@
         </li>
     </ul>
 </nav> 
+</header>
+<main>
 <table>
     <tr>
         <th>
+            <!-- Dropdown to select places -->
             <select name="Places" id="places">
               <option value="Banglore">Banglore</option>
               <option value="Hyderabad">Hyderabad</option>
@@ -78,6 +82,7 @@
             </select>
         </th>
         <th>
+          <!-- Dropdown to select number of guests -->
             <select name="guest_count" >
                 <option value="1 to 20">Guests: 1 to 20</option>
                 <option value="20 to 50">Guests: 20 to 50</option>
@@ -87,6 +92,7 @@
               </select>
         </th>
         <th>
+          <!-- Date pickup to select dates -->
             <form>
                 <input type="date" value="2022-01-01" class="StartDate" name="Start date">
             </form>
@@ -94,13 +100,13 @@
         <th>
             <select name="Nights">
               <option value="1 night">1 night</option>
-              <option value="2 night">2 night</option>
-              <option value="3 night">3 night</option>
-              <option value="4 night">4 night</option>
-              <option value="5 night">5 night</option>
-              <option value="6 night">6 night</option>
-              <option value="7 night">7 night</option>
-              <option value="8 night">8 night</option> 
+              <option value="2 night">2 nights</option>
+              <option value="3 night">3 nights</option>
+              <option value="4 night">4 nights</option>
+              <option value="5 night">5 nights</option>
+              <option value="6 night">6 nights</option>
+              <option value="7 night">7 nights</option>
+              <option value="8 night">8 nights</option> 
             </select>
         </th>
     </tr>
@@ -110,6 +116,7 @@
 <input type="submit" class="custom-btn btn-6" value="Enquire" onclick="SignUpError()"><span></span>
 <label class="image_label">Take a closer look to the events we hosted</label><br>
 <span><a href="#"></a></span>
+<!-- image pannel -->
 <div class="image-row">
     <div class="column">
       <img src="pannel1.jpg" alt="Snow" style="width:100%" class="picture">
@@ -132,6 +139,7 @@
       <img src="pannel6.jpg" alt="Mountains" style="width:100%" class="picture">
     </div>
   </div>
+  <!-- Review -->
   <h2 class="AddReview">Add Review</h2>
 <button id="review-add-btn" aria-label="add review" title="Add Review"></button>
 <div id="modal" role="dialog" aria-modal="true" aria-labelledby="add-review-header" class="">
@@ -172,13 +180,10 @@
 
 <div class="modal-overlay"></div>
   
-  <a href="" class="bottom-queries">Contact us for any queries</a>
-  
-  
+  <a href="" class="bottom-queries">Contact us for any queries</a>  
   <div class="modal-overlay2"></div>
 
-  <!-- <h2>Add Review</h2>
-  <button id="review-add-btn2" aria-label="add review" ></button> -->
+  <!-- signup page -->
   <div id="modal2" role="dialog" aria-modal="true" aria-labelledby="add-review-header" class="">
     <button class="close-btn2" aria-label="close" title="Close">x</button>
     <div id="review-form2-container">
@@ -189,21 +194,19 @@
           <input name="username" id="username" required="">
         </div>
         <div class="fieldset2">
-          <!-- <div class="rate">
-           </div> -->
         </div>
   
         <div class="fieldset2">
           <label for="Loginpassword">Password</label>
-          <input name="Loginpassword" id="Loginpassword" required="">
+          <input type="password" name="Loginpassword" id="Loginpassword" required="">
         </div>
         <div class="fieldset2right">
-          <button id="submit-login-btn">Sign In</button>
+          <button id="submit-login-btn" onclick="checkCred()">Sign In</button>
         </div>
       </form>
     </div>
   </div>
-  
+</main> 
 <div class="footer-basic">
     <footer>
         <div class="social">
@@ -221,6 +224,7 @@
         <p class="copyright">Mosaic Planners © 2021</p>
     </footer>
 </div>
+<!-- connecting javascript -->
 <script src="HomePage.js"></script> 
 </body>
 </html>
