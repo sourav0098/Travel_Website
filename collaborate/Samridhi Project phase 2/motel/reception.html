@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/motel/css/reception.css">
+	 <script src="https://kit.fontawesome.com/dc0fc0f185.js" crossorigin="anonymous"></script> 
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='styleshee' type='text/css'>
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />		
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+	 <link rel="stylesheet" href="/styles/main.css">
+ </head>
+ <body>  
+     <nav>
+      <div class="navbar-top">
+         <div class="nav-inner-container">
+            <a href="./index.html"><img src="/images/logo.png" alt="" srcset=""></a>
+            <h2>Mosaic Planners</h2>
+         </div>
+         <div class="nav-button-container">
+            <button>Register</button>
+            <button>Sign In</button>
+         </div>
+      </div>
+      <ul class="navbar-bottom">
+         <li><a href="#" alt="Home"><i class="fas fa-home"></i> Home</a>
+            <ul>
+               <li><a href="">Event Booking</a></li>
+               <li><a href="">Corporate Booking</a></li>
+               <li><a href="">Help Desk</a></li>
+            </ul>
+         </li>
+         <li><a href="#" alt="Food"><i class="fas fa-utensils"></i> Food</a>
+            <ul>
+               <li><a href="">Takeway</a></li>
+               <li><a href="">Home Delivery</a></li>
+               <li><a href="">Food Category</a></li>
+               <li><a href="">Helpdesk</a></li>
+               <li><a href="">Virtual Booking</a></li>
+            </ul>
+         </li>
+         <li><a href="#" alt="Accommodation"><i class="fas fa-bed"></i> Accommodation</a>
+            <ul>
+               <li><a href="/HotelBooking.html">Hotel Booking</a></li>
+               <li><a href="/MotelBooking.html">Motel Booking</a></li>
+               <li><a href="/rentalapartments.html">Rental Apartments</a></li>
+            </ul>
+         </li>
+         <li><a href="#" alt="Transportation"><i class="fas fa-taxi"></i> Transportation</a>
+            <ul>
+               <li><a href="">Flight Booking</a></li>
+               <li><a href="">Train Booking</a></li>
+               <li><a href="">Roadway Booking</a></li>
+            </ul>
+         </li>
+         <li><a href="#" alt="Tourism"><i class="fas fa-globe-americas"></i> Tourism</a>
+            <ul>
+               <li><a href="./touristpackages.html">Tourist Packages</a></li>
+               <li><a href="./localguides.html">Local Guides</a></li>
+               <li><a href="./travelplanner">Personal Travel Planner</a></li>
+            </ul>
+         </li>
+      </ul>
+   </nav>
+      <h1>Guest Details</h1>     
+      <div class="grid-contain">
+         <div class="item1">
+            <p><b>Guest ID</b></p>
+         </div>   
+         <div class="item2">
+            Room No:
+            <input type="text" value ="BH5121" size="6">
+            <br>
+            Block:
+            <input type="text" value ="B" size="6">
+         </div> 
+         <div class="item3">
+            <img src="/images/i.jpeg" >
+            
+         </div>
+         <div class="item4">
+            Passport No:
+            <input type="text" value ="B058967" size="6">
+         </div>
+         <div class="item5">
+            Date of Booking:
+            <input type="text" value="21-03-18" size="6">
+         </div> 
+         <div class="item6">
+            Service Type:
+            <input type="text" value="Premium" size="6">
+         </div> 
+         <div class="item7">
+            Booking Expiry:
+            <input type="text" value="26-03-18" size="6">
+         </div>
+         <div class="item8">
+            Booking Renewable:
+            <br>
+            YES:
+            <input type="RADIO" name="Y" >
+            No:
+            <input type="RADIO" name="N">
+         </div>
+      </div>
+     <br>
+      <footer>
+         <a href="#" class="fa fa-instagram"></a>
+         <a href="#" class="fa fa-snapchat"></a>
+         <a href="#" class="fa fa-twitter"></a>
+         <a href="#" class="fa fa-facebook"></a>
+            <ul class="list-inline">
+                 <li class="list-inline-item"><a href="#">Home</a></li>
+                 <li class="list-inline-item"><a href="#">Services</a></li>
+                 <li class="list-inline-item"><a href="#">About</a></li>
+                 <li class="list-inline-item"><a href="#">Terms</a></li>
+                 <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+             </ul>
+             <p>Mosaic  Planners  ©  2021</p>
+     </footer>	
+     <script>
+      let age =prompt("Please verify your age for booking");
+      //let age =parseIntprompt("Please Enter age");
+      if (age<=18)
+      alert('You are a minor'); 
+      else
+      alert("Welcome to our Hotel")
+   </script>
+</body>
+</html>

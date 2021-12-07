@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosaic Planners | Tourism and Packages</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/dc0fc0f185.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Dropdown Navigation Menu -->
+    <nav>
+        <div class="navbar-top">
+            <div class="nav-inner-container">
+                <a href="./touristpackages.html"><img src="./images/logo.png" alt="" srcset=""></a>
+                <h2>Mosaic Planners</h2>
+            </div>
+            <div class="nav-button-container">
+                <button>Register</button>
+                <button>Sign In</button>
+            </div>
+        </div>
+        <div class="menu-btn">
+            <div class="menu-btn-burger">
+            </div>
+        </div>
+        <ul class="navbar-bottom">
+            <li><a href="#" alt="Home"><i class="fas fa-home"></i> Home</a>
+                <ul>
+                    <li><a href="">Event Booking</a></li>
+                    <li><a href="">Corporate Booking</a></li>
+                    <li><a href="">Help Desk</a></li>
+                </ul>
+            </li>
+            <li><a href="#" alt="Food"><i class="fas fa-utensils"></i> Food</a>
+                <ul>
+                    <li><a href="">Weekend Getaway</a></li>
+                    <li><a href="">Offers</a></li>
+                    <li><a href="">Helpdesk</a></li>
+                </ul>
+            </li>
+            <li><a href="#" alt="Accommodation"><i class="fas fa-bed"></i> Accommodation</a>
+                <ul>
+                    <li><a href="">Hotel Booking</a></li>
+                    <li><a href="">Motel Booking</a></li>
+                    <li><a href="">Rental Apartments</a></li>
+                </ul>
+            </li>
+            <li><a href="#" alt="Transportation"><i class="fas fa-taxi"></i> Transportation</a>
+                <ul>
+                    <li><a href="">Flight Booking</a></li>
+                    <li><a href="">Train Booking</a></li>
+                    <li><a href="">Roadway Booking</a></li>
+                </ul>
+            </li>
+            <li><a href="#" alt="Tourism"><i class="fas fa-globe-americas"></i> Tourism</a>
+                <ul>
+                    <li><a href="./touristpackages.html">Tourist Packages</a></li>
+                    <li><a href="./localguides.html">Local Guides</a></li>
+                    <li><a href="./travelplanner.html">Personal Travel Planner</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Cover Image -->
+    <main class="image-slider">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/cover-img 1.jpg">
+                    <h1>Incredible India</h1>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/cover-img 2.jpg">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/cover-img 3.jpg">
+                </div>
+            </div>
+
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </main>
+
+    <!-- Top Section with three cards -->
+    <section class="main-section">
+        <div class="main-card-head">
+            <h2>Your Journey Begins Here</h2>
+        </div>
+        <div class="card-box">
+            <div class="card">
+                <img src="./images/card 1.jpg" alt="">
+                <div class="inner-card">
+                    <h2>Adventure Awaits, Go Find It</h2>
+                    <p>Go on adventure to find out where you truly belong</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/card 2.jpg" alt="">
+                <div class="inner-card">
+                    <h2>Collect Moment</h2>
+                    <p>Start your journey of a thousand miles with us</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/card 3.jpg" alt="">
+                <div class="inner-card">
+                    <h2>Beauty Amplified</h2>
+                    <p>Be ready to dive in the beauty of the nature</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Packages -->
+    <section class="tour-section">
+        <div class="tour-head">
+            <h2>Let's create your dream tour to India</h2>
+        </div>
+        <div class="tour-card-box" id="tour-packages">
+           <!-- Dynamically loading data from JSON file -->
+        </div>
+    </section>
+
+    <!-- Luxury Tour Packages -->
+    <section class="tour-section">
+        <div class="tour-head">
+            <h2>Luxury Tours | Enjoy Luxury Vacations</h2>
+        </div>
+        <div class="tour-card-box" id=luxury-packages>
+           <!-- Dynamically loading data from JSON file -->
+        </div>
+    </section>
+
+    <!-- Adventure Tours Packages-->
+    <section class="tour-section">
+        <div class="tour-head">
+            <h2>Adventure Tours | Enjoy the Thrill</h2>
+        </div>
+        <div class="tour-card-box" id="adventure-packages">
+           <!-- Dynamically loading data from JSON file -->
+        </div>
+    </section>
+
+    <!-- Wildlife Travel Packages -->
+    <section class="tour-section">
+        <div class="tour-head">
+            <h2>Wildlife Travel | Look Deep into Nature</h2>
+        </div>
+        <div class="tour-card-box" id="wildlife-packages">
+           <!-- Dynamically loading data from JSON file -->
+        </div>
+    </section>
+
+    <!-- Footer Widget Section -->
+    <section class="promise">
+        <div class="promise-head">
+            <hr>
+            <h3>Mosaic Planners</h3>
+            <hr>
+        </div>
+        <div class="promise-icons">
+            <div class="promise-icons-container">
+                <i class="fas fa-star"></i>
+                <p>Best Price Guarantee</p>
+            </div>
+            <div class="promise-icons-container">
+                <i class="fas fa-credit-card"></i>
+                <p>Secure Payments</p>
+            </div>
+            <div class="promise-icons-container">
+                <i class="fas fa-heart"></i>
+                <p>Quality Services</p>
+            </div>
+            <div class="promise-icons-container">
+                <i class="fas fa-life-ring"></i>
+                <p>Insolvency Security</p>
+            </div>
+            <div class="promise-icons-container">
+                <i class="fas fa-users"></i>
+                <p>Customer Support</p>
+            </div>
+            <div class="promise-icons-container">
+                <i class="fas fa-comments"></i>
+                <p>Customer Reviews</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-basic">
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Home</a></li>
+            <li class="list-inline-item"><a href="#">Services</a></li>
+            <li class="list-inline-item"><a href="#">About</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Copyright &copy; Mosaic Planners 2021 | All Rights Reserved</p>
+    </footer>
+</body>
+<script src="./js/index.js"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        spaceBetween: 30,
+        slidesPerView: 1,
+        centeredSlides: true,
+        loop: true,
+        keyboard: {
+            enabled: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        }
+    });
+</script>
+
+</html>
