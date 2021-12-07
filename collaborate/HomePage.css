@@ -849,8 +849,6 @@
   }
   #review-form2-container {
     width: 100%;
-    /* background-color: #eee; */
-    /* padding: 0 20px 26px; */
     color: #333;
     overflow-y: auto;
     
@@ -879,7 +877,6 @@
   #review-form2 .rate1 label, #review-form2 .rate1 input {
     display: inline-block;
   }
-  /* Modified from: https://codepen.io/tammykimkim/pen/yegZRw */
 
   #submit-review {
     align-self: flex-end;

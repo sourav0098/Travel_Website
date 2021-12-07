@@ -1,11 +1,34 @@
+flag=0;
 function openForm() {
   
   document.getElementById("LoginForm").style.display = "block";
   
 }
+function checkCred()
+{
+  const loginUsername = document.getElementById('username');
+  const loginpassword = document.getElementById('Loginpassword');
+  if(loginUsername.value="user" && loginpassword.value == "1234")
+  {
+    alert("Login Successful");
+    flag=1
+    closeModal2();
+  }
+  else
+  {
+    alert("Invalid Credentials");
+  }
+}
 function SignUpError()
 {
-    alert("Please Signup to Enquire")
+    if(flag==1)
+    {
+      alert("You will receive a mail from our team shortly");
+    }
+    else
+    {
+    alert("Please Signup to Enquire");
+    }
 }
 let focusedElementBeforeModal;
 const modal = document.getElementById('modal');

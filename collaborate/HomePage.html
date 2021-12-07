@@ -21,7 +21,7 @@
             <h2>Mosaic Planners</h2>
         </div>
         <div class="nav-button-container">
-            <a href="SignUp.html"><button >Register</button></a>
+            <a href="SignUp.html" target="_blank"><button >Register</button></a>
             
             <button id="review-add-btn2">Sign In</button>
         </div>
@@ -177,8 +177,7 @@
   
   <div class="modal-overlay2"></div>
 
-  <!-- <h2>Add Review</h2>
-  <button id="review-add-btn2" aria-label="add review" ></button> -->
+  
   <div id="modal2" role="dialog" aria-modal="true" aria-labelledby="add-review-header" class="">
     <button class="close-btn2" aria-label="close" title="Close">x</button>
     <div id="review-form2-container">
@@ -189,16 +188,14 @@
           <input name="username" id="username" required="">
         </div>
         <div class="fieldset2">
-          <!-- <div class="rate">
-           </div> -->
         </div>
   
         <div class="fieldset2">
           <label for="Loginpassword">Password</label>
-          <input name="Loginpassword" id="Loginpassword" required="">
+          <input type="password" name="Loginpassword" id="Loginpassword" required="">
         </div>
         <div class="fieldset2right">
-          <button id="submit-login-btn">Sign In</button>
+          <button id="submit-login-btn" onclick="checkCred()">Sign In</button>
         </div>
       </form>
     </div>

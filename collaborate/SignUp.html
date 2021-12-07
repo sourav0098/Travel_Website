@@ -9,10 +9,12 @@
     <title>SignUp</title>
 </head>  
 <body>
-  <div class="area" >
+<div class="area" >
     <div id="login-box">
         <div class="left">
           <h1>Sign up</h1>
+          <main>
+          <!-- registration form -->
           <form name="registration" class="registartion-form" onsubmit="return formValidation()">
           <input type="text" id="name" name="name" placeholder="Name" />
           <input type="text" id="email" name="email" placeholder="E-mail" />
@@ -25,20 +27,21 @@
           Other: <input type="radio" name="gender" value="other">
           <br><br><input type="text" id="zipcode" name="zip" placeholder="Postal code" />
           <input type="submit" class="submit" name="signup_submit" value="Sign me up" />
-        </form>
+          </form>
         </div>
-        
+        <!-- Social media buttons -->
         <div class="right">
           <span class="loginwith">Sign in with<br />social network</span>
-          
           <button class="social-signin facebook">Log in with facebook</button>
           <button class="social-signin twitter">Log in with Twitter</button>
           <button class="social-signin google">Log in with Google+</button>
         </div>
         <div class="or">OR</div>
-      </div>
+    </div>
       <script src="SignUp.js"></script>
-     
+    </main>
+    <footer>
+        <!-- Providing background effect -->
         <ul class="circles">
                 <li></li>
                 <li></li>
@@ -51,8 +54,7 @@
                 <li></li>
                 <li></li>
         </ul>
+      </footer>
 </div >
-     </body>
+</body>
 </html>
-
-

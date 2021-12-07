@@ -50,5 +50,6 @@ function formValidation() {
     zipcode.focus();
     return false;
   }
+  alert("Registration Successful")
   return true;
 }

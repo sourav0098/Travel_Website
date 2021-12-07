@@ -7,9 +7,6 @@
 body {
   margin: 0px;
   padding: 0;
-  /* background: #DDD; */
-  /* background-image: url("HomeSS.jpg"); */
-  /* background-size: cover; */
   font-size: 16px;
   color: #222;
   font-family: 'Roboto', sans-serif;
@@ -27,6 +24,7 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
+/* form */
 .left {
   position: absolute;
   top: 0;
@@ -107,6 +105,7 @@ input[type="submit"]:active {
   text-align: center;
 }
 
+/* social media buttons */
 .right {
   position: absolute;
   top: 0;
@@ -178,7 +177,7 @@ button.social-signin.google {
   font-size: 50px;
 }
 
-
+/* background effect */
 .area{
   background: #4e54c8;  
   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
