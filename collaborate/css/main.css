@@ -63,7 +63,7 @@ nav {
   display: flex;
   align-items: center;
   position: relative;
-
+  margin-bottom: 0;
 }
 
 .navbar-bottom li {
