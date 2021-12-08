@@ -1,11 +1,37 @@
+flag=0;
+//opens the floating form
 function openForm() {
   
   document.getElementById("LoginForm").style.display = "block";
   
 }
+//checks the credentials
+function checkCred()
+{
+  const loginUsername = document.getElementById('username');
+  const loginpassword = document.getElementById('Loginpassword');
+  if(loginUsername.value="user" && loginpassword.value == "1234")
+  {
+    alert("Login Successful");
+    flag=1
+    closeModal2();
+  }
+  else
+  {
+    alert("Invalid Credentials");
+  }
+}
+//error
 function SignUpError()
 {
-    alert("Please Signup to Enquire")
+    if(flag==1)
+    {
+      alert("You will receive a mail from our team shortly");
+    }
+    else
+    {
+    alert("Please Signup to Enquire");
+    }
 }
 let focusedElementBeforeModal;
 const modal = document.getElementById('modal');
@@ -22,7 +48,7 @@ window.onload = () => {
   addReview.setAttribute('aria-label', 'add review');
   addReview.title = 'Add Review';
   addReview.addEventListener('click', openModal);
-  // addReview.click();
+ 
 
 
   const addReview2 = document.getElementById('review-add-btn2');
@@ -31,7 +57,7 @@ window.onload = () => {
   addReview2.setAttribute('aria-label', 'add review');
   addReview2.title = 'Add Review';
   addReview2.addEventListener('click', openModal2);
-  // addReview2.click();
+  
 } 
 
 const openModal = () => {
@@ -276,16 +302,5 @@ const navRadioGroup = (evt) => {
 };
 
 
-
-
-// window.onload = () => {
-//   const addReview2 = document.getElementById('review-add-btn2');
-//   addReview2.id = 'review-add-btn2';
-//   addReview2.innerHTML = '+';
-//   addReview2.setAttribute('aria-label', 'add review');
-//   addReview2.title = 'Add Review';
-//   addReview2.addEventListener('click', openModal2);
-//   addReview2.click();
-// }
 
 
