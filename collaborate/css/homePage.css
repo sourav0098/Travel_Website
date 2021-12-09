@@ -8,7 +8,7 @@
     
   }
   body{
-    background-image: url("Home_BG.jpg");
+    background-image: url("../images/Home_BG.jpg");
     /* background-size:cover;  */
     background-size: 1520px 800px;
     background-repeat: no-repeat;
@@ -269,6 +269,11 @@
     margin-top: -5px;
     height: 30px;
   }
+
+  img{
+    object-fit: cover;
+  }
+
   .rate:not(:checked) > input {
     /* position: absolute; */
     top: -9999px;
