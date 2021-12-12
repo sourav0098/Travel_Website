@@ -1,3 +1,4 @@
+
 * {
     padding: 0;
     margin: 0;
@@ -91,15 +92,14 @@
   }
 
  .big {
-   height: 120px;
    background-color: #294987;
    font-size: 40px;
    color: orange;
    font-weight: 800;
    text-decoration: overline;
    text-align: center;
-   line-height: 160px;
    word-spacing: 15px;
+   padding-top: 21px;
   
  }
 
@@ -107,13 +107,14 @@
    display: flex;
    justify-content: center;
    background-color: rgb(255, 255, 255);
+   background-color:#294987 ;
 
    
  }
  .bigger {
   display: flex;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
+  background-color: #294987;
   
   
  }
@@ -148,7 +149,6 @@
    color:rgb(247, 198, 4) ;
  }
  p {
-   margin-top: 35px;
    color: rgb(247, 198, 4);
  }
  

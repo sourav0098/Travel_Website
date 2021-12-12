@@ -1,6 +1,6 @@
 window.onload = function(){
     var img1 = document.getElementById("img1");
-    var imgArr1 = ["img/b1.jpg","img/b2.jpg","img/b3.jpg","img/b4.jpg"]
+    var imgArr1 = ["./images/b1.jpg","./images/b2.jpg","./images/b3.jpg","./images/b4.jpg"]
     var index1 = 0;
     setInterval(function(){
         index1++;
@@ -11,7 +11,7 @@ window.onload = function(){
     },2000);
 
     var img2 = document.getElementById("img2");
-    var imgArr2 = ["img/d1.jpg","img/d2.jpg","img/d3.jpg","img/d4.jpg","img/d5.jpg"]
+    var imgArr2 = ["./images/d1.jpg","./images/d2.jpg","./images/d3.jpg","./images/d4.jpg","./images/d5.jpg"]
     var index2 = 0;
     setInterval(function(){
         index2++;
@@ -22,7 +22,7 @@ window.onload = function(){
     },2000);
 
     var img3 = document.getElementById("img3");
-    var imgArr3 = ["img/h1.jpg","img/h2.jpg","img/h3.jpg","img/h4.jpg"]
+    var imgArr3 = ["./images/h1.jpg","./images/h2.jpg","./images/h3.jpg","./images/h4.jpg"]
     var index3 = 0;
     setInterval(function(){
         index3++;
@@ -33,7 +33,7 @@ window.onload = function(){
     },2000);
 
     var img4 = document.getElementById("img4");
-    var imgArr4 = ["img/m1.jpg","img/m2.jpg","img/m3.jpg","img/m4.jpg"]
+    var imgArr4 = ["./images/m1.jpg","./images/m2.jpg","./images/m3.jpg","./images/m4.jpg"]
     var index4 = 0;
     setInterval(function(){
         index4++;
@@ -44,7 +44,7 @@ window.onload = function(){
     },2000);
 
     var img5 = document.getElementById("img5");
-    var imgArr5 = ["img/u1.jpg","img/u2.jpg","img/u3.jpg","img/u4.jpg"]
+    var imgArr5 = ["./images/u1.jpg","./images/u2.jpg","./images/u3.jpg","./images/u4.jpg"]
     var index5 = 0;
     setInterval(function(){
         index5++;

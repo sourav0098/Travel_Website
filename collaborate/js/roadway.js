@@ -1,6 +1,6 @@
 window.onload = function(){
     var imgElt1 = document.getElementById("img1");
-    var imgArr1 = ["img/b2.jpg","img/d2.jpg","img/h2.jpg","img/m2.jpg","img/u2.jpg","img/b3.jpg"]
+    var imgArr1 = ["./images/b2.jpg","./images/d2.jpg","./images/h2.jpg","./images/m2.jpg","./images/u2.jpg","./images/b3.jpg"]
     var index1 = 0;
     setInterval(function(){
         index1++;
@@ -11,7 +11,7 @@ window.onload = function(){
     },3000);
 
     var imgElt2 = document.getElementById("img2");
-    var imgArr2 = ["img/b4.jpg","img/d3.jpg","img/h3.jpg","img/m3.jpg","img/u3.jpg","img/d1.jpg"]
+    var imgArr2 = ["./images/b4.jpg","./images/d3.jpg","./images/h3.jpg","./images/m3.jpg","./images/u3.jpg","./images/d1.jpg"]
     var index2 = 0;
     setInterval(function(){
         index2++;
