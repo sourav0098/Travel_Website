@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/buy.css">
+    <title>Document</title>
+    
+<body id="big">
+    <div class="personal">Identity Information</div>
+    <form action="http://localhost:8080/jd/save" method="get">
+        
+        <input type="text" id="username" placeholder="Name" onblur=report()><br><span id="nameError"></span><br>
+        <input type="text" id="email" placeholder="Email" onblur=report1()><br><span id="emailError"></span><br>
+        <input type="text" id="phone" placeholder="Phone" onblur=report2()><br><span id="phoneError"></span><br>
+        <input type="text" id="passport" placeholder="Passport" onblur=report3()><br><span id="pstError"></span><br>
+        <input type="date" id="date"><br>
+        <select name="" id="time">
+            <option value="07:00">07:00</option>
+            <option value="13:00">13:00</option>
+            <option value="17:00">17:00</option>
+        </select><br>
+        <input type="button" class="btn1" id="btn" value="Buy" onclick=show()>
+    </form>
+    <div class="ticket_title">TICKET INFORMATION</div>
+    <div class="ticket_info">
+        <div class="first_col">
+            <br> NAME:&nbsp;&nbsp;<span id="name1"></span><br><br>
+            PHONE:&nbsp;&nbsp;<span id="phone1"></span><br><br>
+            
+        </div>
+        <div class="second_col">
+            <br> DESTINATION:&nbsp;&nbsp;Delhi<span id="des"></span><br><br>
+            EMAIL:&nbsp;&nbsp;<span id="email1"></span><br><br>
+            
+        </div>
+        <div class="third_col">
+            <br>DATE:&nbsp;&nbsp;<span id="date1"></span><br><br>
+            TIME:&nbsp;&nbsp;<span id="time1"></span><br><br>
+        </div>&nbsp;
+    </div>
+    <script src="../js/buy.js"></script>
+</body>
+</html>

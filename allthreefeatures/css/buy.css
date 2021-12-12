@@ -1,0 +1,66 @@
+#big {
+    background-color: #294987;
+    position: relative;
+}
+form {
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    top: 300px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+form span {
+    color: orange;
+    font-weight: 900;
+}
+input {
+    height: 30px;
+    width: 300px;
+    box-sizing: border-box;
+    
+    
+}
+select {
+    height: 30px;
+    width: 300px;
+}
+.btn1 {
+    color: orange;
+    font-weight: 900;
+    font-size: 15px;
+}
+.personal {
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 35px;
+    font-weight: 900;
+    color: orange;
+}
+.ticket_info{
+    display: flex;
+    justify-content: space-around;
+    position:absolute;
+    margin-top: 600px;
+    margin-left: 415px;
+    width: 900px;
+   font-size: 20px;
+   color: orange;
+    border: 3px orange dotted;
+}
+.ticket_title {
+    color: orange;
+    border: 3px orange dotted;
+    width: 900px;
+    text-align: center;
+    margin-left: 415px;
+    position: absolute;
+    margin-top: 550px;
+    font-size: 35px;
+}

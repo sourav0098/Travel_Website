@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    background: #294987;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .navbar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 36px;
+  }
+  
+  .navbar-top img {
+    height: 67px;
+    padding: 2px 7px;
+    transform: rotate(12deg);
+    filter: brightness(1.05);
+  }
+  
+  .navbar-top button {
+    cursor: pointer;
+    border: none;
+    background: white;
+    color: #294987;
+    font-family: "Roboto", sans-serif;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin: 0 4px;
+  }
+  
+  .navbar-top button:hover {
+    background: #eef4ff;
+  }
+  
+  .nav-inner-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-inner-container h2 {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 1.9rem;
+  }
+  
+  .navbar-bottom {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .navbar-bottom li {
+    list-style: none;
+  }
+  
+  .navbar-bottom li a {
+    display: inline-block;
+    padding: 8px 42px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .navbar-bottom li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    z-index: 2;
+    background: #294987;
+  }
+  
+  .navbar-bottom li:hover {
+    background-color: hsla(0, 0%, 100%, 0.06);
+  }
+  
+  .navbar-bottom li:hover > ul {
+    display: block;
+  }
+  
+  .fas {
+    padding-right: 3px;
+  }
+  #all {
+      background-color: #f8fafd;
+  }
+  
+  .first {
+      width: 100%;
+      height: 100px;
+      background-color: #294987;
+      font-size: 50px;
+      text-align: center;
+      font-style: italic;
+      color:#ffa500;
+      font-weight: 900;
+  }
+ p {
+    padding-top: 20px;
+ }
+ .second {
+   background-image: url("../img/train.jpg");
+   background-position: center;
+   background-size: cover;
+   
+ }
+ .second div {
+     margin-top: 55px;
+     margin-left: 460px;
+ }
+
+ .delhi {
+   
+     width: 950px;
+     height: 101px;
+     background-color: #fff2f2;
+     border-radius: 10px;
+     font-size: 20px;
+     display: flex;
+     justify-content: space-around;
+ }
+ .Hyderabad {
+    width: 950px;
+    height: 101px;
+    background-color: #fff2f2;
+   border-radius: 10px;
+   font-size: 20px;
+   display: flex;
+    justify-content: space-around;
+}
+
+.Mumbai {
+    width: 950px;
+    height: 101px;
+    background-color: #fff2f2;
+   border-radius: 10px;
+   font-size: 20px;
+   display: flex;
+   justify-content: space-around;}
+
+   .Udaipur{
+    width: 950px;
+    height: 101px;
+    background-color: #fff2f2;
+   border-radius: 10px;
+   font-size: 20px;
+   display: flex;
+   justify-content: space-around;}
+
+ span {
+     line-height: 101px;
+     margin-left: 50px;
+ }
+
+ 
