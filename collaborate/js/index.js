@@ -28,8 +28,9 @@ let xhr = new XMLHttpRequest();
 xhr.open("GET", "./json/data.json", true);
 xhr.onload = (() => {
     if (xhr.status === 200) {
+        console.log("helo");
         let obj = JSON.parse(xhr.responseText);
-        if (document.URL == "http://127.0.0.1:5501/collaborate/touristpackages.html") {
+        if (document.URL.endsWith("/collaborate/touristpackages.html")) {
             let tourPackages = document.getElementById("tour-packages");
             let luxuryPackages = document.getElementById("luxury-packages");
             let adventurePackages = document.getElementById("adventure-packages");
@@ -106,7 +107,7 @@ xhr.onload = (() => {
             wildlifePackages.innerHTML = html4;
 
         }
-        else if (document.URL == "http://127.0.0.1:5501/collaborate/localguides.html") {
+        else if (document.URL.endsWith("/collaborate/localguides.html")) {
             let localGuideProfiles = document.getElementById("local-guides-container");
             let html = "";
 
@@ -126,7 +127,7 @@ xhr.onload = (() => {
             }
             localGuideProfiles.innerHTML = html;
         }
-        else if (document.URL == "http://127.0.0.1:5501/collaborate/travelplanner.html") {
+        else if (document.URL.endsWith("/collaborate/travelplanner.html")) {
             let reviewSlider = document.getElementById("review-slider");
             let html = "";
             for (key in obj.reviews) {
@@ -146,14 +147,18 @@ xhr.onload = (() => {
 xhr.send();
 
 // Form Validation
-if (document.URL == "http://127.0.0.1:5501/collaborate/travelplannerrequest.html") {
+if (document.URL.endsWith("/collaborate/travelplannerrequest.html")) {
     const userName = document.getElementById("name");
     const email = document.getElementById("email");
     const phone = document.getElementById("tel");
+    const startDate=document.getElementById("trip-start-date");
+    const endDate=document.getElementById("trip-end-date");
+
 
     let validName = false;
     let validEmail = false;
     let validPhone = false;
+    let validEndDate=false;
 
     userName.addEventListener("blur", () => {
         let regex = /^[a-zA-Z ]{2,30}$/;
@@ -198,17 +203,43 @@ if (document.URL == "http://127.0.0.1:5501/collaborate/travelplannerrequest.html
         }
     })
 
+    startDate.addEventListener("blur",()=>{
+        if(Date.parse(startDate.value)>=Date.parse(endDate.value)){
+            endDate.classList.add("is-invalid");
+            endDate.style.backgroundImage="none";
+            validEndDate=false;
+        }
+        else{
+            endDate.classList.remove("is-invalid")
+            validEndDate=true;
+        }
+    })
+    endDate.addEventListener("blur",()=>{
+        if(Date.parse(startDate.value)>=Date.parse(endDate.value)){
+            endDate.classList.add("is-invalid");
+            endDate.style.backgroundImage="none";
+            validEndDate=false;
+        }
+        else{
+            endDate.classList.remove("is-invalid")
+            validEndDate=true;
+        }
+    })
+
     let submit = document.getElementById("submit");
     submit.addEventListener("click", (e) => {
         e.preventDefault();
 
         let alert = document.getElementById("alert");
-        if (validName && validPhone && validEmail == true) {
+        if (validName && validPhone && validEmail && validEndDate== true) {
             alert.classList.add("show");
             alert.classList.add("alert-success");
             alert.classList.remove("alert-danger");
             alert.innerHTML = `<p><span>Success! </span>Your travel request has been succesfully submitted</p>
             <button id="close-btn" onclick=closeAlert()><i class="fas fa-times"></i></button>`;
+            userName.value = "";
+            phone.value = "";
+            email.value = "";
         }
         else {
             alert.classList.add("show");
@@ -239,6 +270,7 @@ if (document.URL == "http://127.0.0.1:5501/collaborate/travelplannerrequest.html
     }
 
     let minDate = `${year}-${month}-${tdate}`;
-    document.getElementById("trip-start-date").setAttribute("min", minDate);
-    document.getElementById("trip-end-date").setAttribute("min", minDate);
+    startDate.setAttribute("min", minDate);
+    endDate.setAttribute("min", minDate);
+
 }

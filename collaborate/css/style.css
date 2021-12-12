@@ -1042,7 +1042,7 @@ nav {
 
 .form-group input[type="submit"] {
   margin-bottom: 20px;
-  width: 18%;
+  width: 135px;
   font-family: "Roboto";
   border: none;
   cursor: pointer;
@@ -1140,6 +1140,9 @@ nav {
   .planner-work-card-container {
     justify-content: center;
   }
+  .planner-request-form-container {
+    width: 75%;
+  }
 }
 @media screen and (max-width: 900px) {
   .inner-card h2,
@@ -1234,6 +1237,9 @@ nav {
   .planner-testimonials {
     margin: 0;
   }
+  .planner-request-form-container {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 694px) {
@@ -1297,6 +1303,15 @@ nav {
     font-size: 3rem;
     padding-top: 141px;
   }
+  .testimonial-swiper .swiper-slide p{
+   padding: 16px 48px; 
+  }
+  .testimonial-swiper .swiper-slide p::before{
+    left:10px;
+  }
+  .testimonial-swiper .swiper-slide p::after{
+    right:10px;
+  }
 }
 
 @media screen and (max-width: 645px) {
@@ -1351,7 +1366,7 @@ nav {
 }
 
 @media screen and (max-width: 555px) {
-  .swiper{
+  .swiper {
     height: 320px;
   }
   .swiper-slide h1 {
@@ -1430,6 +1445,19 @@ nav {
   }
   .swiper-slide p {
     padding: 16px 22px;
+  }
+  .planner-request-form-head h1 {
+    font-size: 1.4rem;
+  }
+  .planner-request-form {
+    margin: 0px 33px;
+  }
+  #alert p{
+    padding: 12px 31px;
+    padding-right: 0;
+  }
+  #alert button{
+    padding: 9px 31px;
   }
 }
 
