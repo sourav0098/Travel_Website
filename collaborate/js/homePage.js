@@ -301,6 +301,16 @@ const navRadioGroup = (evt) => {
   }
 };
 
-
+var dialog = document.getElementById( "popup" );
+function show() {
+  
+  dialog.show ();
+  
+}
+function closePopup() {
+  
+  dialog.close ();
+  
+}
 
 
