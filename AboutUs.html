@@ -35,7 +35,7 @@
         <ul>
           <li><a href="./index.html">Event Booking</a></li>
           <li><a href="./AboutUs.html">About US</a></li>
-          <li><a href="">Help Desk</a></li>
+          <li><a href="./AboutUs.html#screenBody">Help Desk</a></li>
         </ul>
       </li>
       <li><a href="#" alt="Food"><i class="fas fa-utensils"></i> Food</a>
@@ -224,20 +224,10 @@
         </div>
       </div>
     </div>
-    <!-- <div class="text">Caption Text5</div> -->
+    
   </div>
 
-  <!-- <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="img2.jpg" style="width:100%">
-    <div class="text">Caption Two</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="img3.jpg" style="width:100%">
-    <div class="text">Caption Three</div>
-  </div> -->
+  
 
   <!-- Next and previous buttons -->
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -268,43 +258,34 @@
     <div class="background">
       <div class="container">
         <div class="screen">
-          <!-- <div class="screen-header">
-            <div class="screen-header-left">
-              <div class="screen-header-button close"></div>
-              <div class="screen-header-button maximize"></div>
-              <div class="screen-header-button minimize"></div>
-            </div>
-            <div class="screen-header-right">
-              <div class="screen-header-ellipsis"></div>
-              <div class="screen-header-ellipsis"></div>
-              <div class="screen-header-ellipsis"></div>
-            </div>
-          </div> -->
-          <div class="screen-body">
+         
+          <div class="screen-body" id="screenBody">
             <div class="screen-body-item left">
               <div class="app-title">
-                <span>CONTACT US</span>
+                <span class="contactUsText">CONTACT US</span>
               </div>
               <div class="app-contact">CONTACT INFO : enquiry@mosaic.com</div>
             </div>
             <div class="screen-body-item">
               <div class="app-form">
                 <div class="app-form-group">
-                  <input class="app-form-control" placeholder="NAME">
+                  <form name="registration" class="registartion-form" onsubmit="return formValidation()">
+                  <input class="app-form-control" id="name" placeholder="NAME">
                 </div>
                 <div class="app-form-group">
-                  <input class="app-form-control" placeholder="EMAIL">
+                  <input class="app-form-control" id="email" placeholder="EMAIL">
                 </div>
                 <div class="app-form-group">
-                  <input class="app-form-control" placeholder="CONTACT NO">
+                  <input class="app-form-control" id="contact" placeholder="CONTACT NO">
                 </div>
                 <div class="app-form-group message">
-                  <input class="app-form-control" placeholder="MESSAGE">
+                  <input class="app-form-control" id="message" placeholder="MESSAGE">
                 </div>
                 <div class="app-form-group buttons">
-                  <button class="app-form-button">CANCEL</button>
-                  <button class="app-form-button">SEND</button>
+                  <button type="submit" class="app-form-button" onclick="formValidation()">SEND</button>
                 </div>
+                <p id="error"></p>
+              </form>
               </div>
             </div>
           </div>
@@ -324,9 +305,9 @@
             <a href="#"><i class="icon ion-social-twitter"></i></a>
             <a href="#"><i class="icon ion-social-facebook"></i></a></div>
             <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="./index.html">Home</a></li>
                 <li class="list-inline-item"><a href="#">Services</a></li>
-                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="./AboutUs.html">About</a></li>
                 <li class="list-inline-item"><a href="#">Terms</a></li>
                 <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
             </ul>
