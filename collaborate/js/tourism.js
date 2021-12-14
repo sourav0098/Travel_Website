@@ -23,12 +23,11 @@ faqs.forEach(faq => {
     })
 })
 
-// Dynamically Loading Data using AJAX 
+// Loading Data from JSON using AJAX 
 let xhr = new XMLHttpRequest();
 xhr.open("GET", "./json/data.json", true);
 xhr.onload = (() => {
     if (xhr.status === 200) {
-        console.log("helo");
         let obj = JSON.parse(xhr.responseText);
         if (document.URL.endsWith("/collaborate/touristpackages.html")) {
             let tourPackages = document.getElementById("tour-packages");
@@ -214,6 +213,7 @@ if (document.URL.endsWith("/collaborate/travelplannerrequest.html")) {
             validEndDate=true;
         }
     })
+    
     endDate.addEventListener("blur",()=>{
         if(Date.parse(startDate.value)>=Date.parse(endDate.value)){
             endDate.classList.add("is-invalid");
@@ -240,6 +240,8 @@ if (document.URL.endsWith("/collaborate/travelplannerrequest.html")) {
             userName.value = "";
             phone.value = "";
             email.value = "";
+            startDate.value="";
+            endDate.value="";
         }
         else {
             alert.classList.add("show");
@@ -272,5 +274,4 @@ if (document.URL.endsWith("/collaborate/travelplannerrequest.html")) {
     let minDate = `${year}-${month}-${tdate}`;
     startDate.setAttribute("min", minDate);
     endDate.setAttribute("min", minDate);
-
 }

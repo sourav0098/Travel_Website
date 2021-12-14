@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Mosaic Planner</title>
+		<meta charset="utf-8">
+		<script src="https://kit.fontawesome.com/dc0fc0f185.js" crossorigin="anonymous"></script> 
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='styleshee' type='text/css'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />		
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="./css/main.css">
+      <link rel="stylesheet" href="./css/rental.css">
+     
+	</head>
+	<body>
+    <nav>
+      <div class="navbar-top">
+          <div class="nav-inner-container">
+              <a href="./index.html"><img src="./images/logo.png" alt="" srcset=""></a>
+              <h2>Mosaic Planners</h2>
+          </div>
+      </div>
+      <ul class="navbar-bottom">
+          <li><a href="#" alt="Home"><i class="fas fa-home"></i> Home</a>
+              <ul>
+                  <li><a href="./homePage.html">Event Booking</a></li>
+                  <li><a href="./AboutUs.html">About US</a></li>
+                  <li><a href="">Help Desk</a></li>
+              </ul>
+          </li>
+          <li><a href="#" alt="Food"><i class="fas fa-utensils"></i> Food</a>
+              <ul>
+                  <li><a href="">Weekend Getaway</a></li>
+                  <li><a href="">Offers</a></li>
+                  <li><a href="">Help Desk</a></li>
+              </ul>
+          </li>
+          <li><a href="#" alt="Accommodation"><i class="fas fa-bed"></i> Accommodation</a>
+              <ul>
+                  <li><a href="HotelBooking.html">Hotel Booking</a></li>
+                  <li><a href="MotelBooking.html">Motel Booking</a></li>
+                  <li><a href="RentalApartments.html">Rental Apartments</a></li>
+              </ul>
+          </li>
+          <li><a href="#" alt="Transportation"><i class="fas fa-taxi"></i> Transportation</a>
+              <ul>
+                  <li><a href="./flight.html">Flight Booking</a></li>
+                  <li><a href="./train.html">Train Booking</a></li>
+                  <li><a href="./roadway.html">Roadway Booking</a></li>
+              </ul>
+          </li>
+          <li><a href="#" alt="Tourism"><i class="fas fa-globe-americas"></i> Tourism</a>
+              <ul>
+                  <li><a href="./touristpackages.html">Tourist Packages</a></li>
+                  <li><a href="./localguides.html">Local Guides</a></li>
+                  <li><a href="./travelplanner">Personal Travel Planner</a></li>
+              </ul>
+          </li>
+      </ul>
+  </nav>
+    <div class="main"> 
+    <div style="z-index:3;width:300px">
+      <div>
+        <h3>Rental</h3>
+        <h3>from $99</h3>
+        <h6>per night</h6>
+        <hr>
+        <form action="/action_page.php" target="_blank">
+          <p><label><i class="fa fa-calendar-check-o"></i> Check In</label></p>
+          <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckIn" required="">          
+          <p><label><i class="fa fa-calendar-o"></i> Check Out</label></p>
+          <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckOut" required="">         
+          <p><label><i class="fa fa-male"></i> Adults</label></p>
+          <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6">              
+          <p><label><i class="fa fa-child"></i> Kids</label></p>
+          <input class="w3-input w3-border" type="number" value="0" name="Kids" min="0" max="6">
+          <p><button type="submit"><i class="fa fa-search "></i> Search availability</button></p>
+        </form>
+      </div>
+      <div>
+        <a href="#apartment"><i class="fa fa-building"></i> Apartment</a>
+        <a href="javascript:void(0)" onclick="document.getElementById('subscribe').style.display='block'"><i class="fa fa-rss"></i> Subscribe</a>
+        <a href="#contact"><i class="fa fa-envelope"></i> Contact</a>
+      </div>
+    </div>
+ 		<!-- !PAGE CONTENT! -->
+    <div> 
+        <h2>Rental Apartments</h2>
+        <div class="container" id="apartment">
+          <div class="display-container mySlides" style="display: block;">
+          <img src="./images/livingroom.jpg" style="width:100%">
+            <div class="display-bottomleft container black">
+              <p>Living Room</p>
+            </div>
+          </div>
+          <div class="display-container mySlides" style="display: none;">
+          <img src="./images/diningroom.jpg" style="width:100%">
+            <div class="display-bottomleft container black">
+              <p>Dining Room</p>
+            </div>
+          </div>
+          <div class="display-container mySlides" style="display: none;">
+          <img src="./images/bedroom.jpg" style="width:100%">
+            <div class="display-bottomleft container black">
+              <p>Bedroom</p>
+            </div>
+          </div>
+          <div class="display-container mySlides" style="display: none;">
+          <img src="./images/livingroom2.jpg" style="width:100%">
+            <div class="display-bottomleft container black">
+              <p>Living Room II</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-padding section">
+          <div class="col s3">
+            <img class="demo opacity hover-opacity-off opacity-off" src="./images/livingroom.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)" title="Living room">
+          </div>
+          <div class="col s3">
+            <img class="demo opacity hover-opacity-off" src="./images/diningroom.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)" title="Dining room">
+          </div>
+          <div class="col s3">
+            <img class="demo opacity hover-opacity-off" src="./images/bedroom.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)" title="Bedroom">
+          </div>
+          <div class="col s3">
+            <img class="demo opacity hover-opacity-off" src="./images/livingroom2.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Second Living Room">
+          </div>
+        </div> 
+            <!--  <div class = "abes">
+                <div class="polaroid">
+                <img src="/images/livingroom.jpg" alt="Living Room">
+                  <div class="container">
+                  <p>Living Room</p>
+                  </div>
+                </div>
+                <div class="polaroid">
+                <img src="/images/diningroom.jpg" alt="Dining Room">
+                    <div class="container">
+                    <p>Dining Room</p>
+                    </div>
+                </div>
+              </div>
+              <div class = "abes">
+                <div class="polaroid">
+                  <img src="/images/bedroom.jpg" alt="Bedroom">
+                  <div class="container">
+                  <p>Bedroom</p>
+                  </div>
+                </div>
+                <div class="polaroid">
+                  <img src="/images/livingroom2.jpg" alt="hall">
+                  <div class="container">
+                  <p>Hall</p>
+                  </div>
+                </div>
+              </div>-->
+                <h4><strong>The Space</strong></h4>
+                <div class="row">
+                  <div class="col">
+                    <p><i class="fa fa-fw fa-male"></i> Max people: 4</p>
+                    <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 2</p>
+                    <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 1</p>
+                  </div>
+                  <div class="col">
+                    <p><i class="fa fa-fw fa-clock-o"></i> Check In: After 3PM</p>
+                    <p><i class="fa fa-fw fa-clock-o"></i> Check Out: 12PM</p>
+                  </div>
+                </div>
+                <h4><strong>Amenities</strong></h4>
+                <div class="row">
+                    <div class="col">
+                      <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+                      <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+                      <p><i class="fa fa-fw fa-tv"></i> TV</p>
+                    </div>
+                    <div class="col">
+                      <p><i class="fa fa-fw fa-thermometer"></i> Heating</p>
+                      <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
+                    </div>
+                 </div>
+              <h4><strong>Extra Info</strong></h4>
+              <p>Our apartment is really clean and we like to keep it that way. 
+                we welcome you to our facility and send gifts for both. 
+                We hope you would have a pleasant stay here and enjoy the offers during your reside..</p>
+              <p>We accept: <i class="fa fa-credit-card"></i> <i class="fa fa-cc-mastercard">
+              </i> <i class="fa fa-cc-amex"></i> <i class="fa fa-cc-paypal"></i></p>
+              <h4><strong>Rules</strong></h4>
+              <p>Rental Apartments rules are management policy or agreements between the guest and the hotel. 
+                Usually these policies are mentioned on the guest registration card which is signed by the guest
+                 at the time of check in. In Addition to this a copy of rules and regulation is also kept on all
+                  guest rooms for guest to read and understand the management policies. This can also include the
+                   local government policies which have to be followed by the guest. </p>
+              <p>Subscribe to receive updates on available dates and special offers.</p>
+              <p><button onclick="document.getElementById('subscribe').style.display='block'">Subscribe</button></p>
+              <h2>Contact</h2>
+              <i class="fa fa-map-marker" style="width:35px"></i> New Delhi, India<br>
+              <i class="fa fa-phone" style="width:35px"></i> Phone: +91-8920211160<br>
+              <i class="fa fa-envelope" style="width:35px"> </i> Email: rentalapartments.com<br><br>
+              <p>Questions? Go ahead :</p>
+              <form action="/action_page.php" target="_blank">
+                <p><input type="text" placeholder="Name" required="" name="Name"></p>
+                <p><input type="text" placeholder="Email" required="" name="Email"></p>
+                <p><input type="text" placeholder="Message" required="" name="Message"></p>
+                <button type="submit" style="background-color:hotpink;">Send a Message</button>
+              </form> 
+              <script src="./js/rental.js"></script> <br>
+              <div id="subscribe">
+                  <div class="w3-container w3-white w3-center">
+                    <i onclick="document.getElementById('subscribe').style.display='none'" ></i>
+                    <h2 class="w3-wide">SUBSCRIBE</h2>
+                    <p>Join our mailing list to receive updates on available dates and special offers.</p>
+                    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+                    <button type="button" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+                  </div>
+              </div>
+    </div>   
+  </div>       
+    <footer>
+				<a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-snapchat"></a>
+        <a href="#" class="fa fa-twitter"></a>
+				<a href="#" class="fa fa-facebook"></a>
+                   <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">Home</a></li>
+                        <li class="list-inline-item"><a href="#">Services</a></li>
+                        <li class="list-inline-item"><a href="#">About</a></li>
+                        <li class="list-inline-item"><a href="#">Terms</a></li>
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                    </ul>
+        <p>Mosaic  Planners  ©  2021</p>
+    </footer>			          
+		</body>
+		</html>
