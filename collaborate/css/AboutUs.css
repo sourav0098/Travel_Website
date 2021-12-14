@@ -221,6 +221,14 @@ h3.services{
 {
   font-size: 25px;
 }
+.img-fluid
+{
+  border-radius: 100%;
+  width: 120px;
+  height: 80px; 
+  overflow: hidden;
+  margin: 0%;
+}
 .team-member {
   width: 100%;
   /* float: left; */
@@ -454,7 +462,7 @@ h3.services{
   cursor: pointer;
   height: 15px;
   width: 15px;
-  /* margin: 0 2px; */
+  margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -467,11 +475,9 @@ h3.services{
 }
 .dotcircle
 {
-  
-  background-color: red;
-  width: 1518px;
-  
-  margin-right: 500px;
+  padding-top: 20px;
+  margin-left: 55%;
+  width: 600px;
 }
 
 .background
