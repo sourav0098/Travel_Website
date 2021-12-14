@@ -29,7 +29,7 @@ xhr.open("GET", "./json/data.json", true);
 xhr.onload = (() => {
     if (xhr.status === 200) {
         let obj = JSON.parse(xhr.responseText);
-        if (document.URL.endsWith("/collaborate/touristpackages.html")) {
+        if (document.URL.endsWith("/touristpackages.html")) {
             let tourPackages = document.getElementById("tour-packages");
             let luxuryPackages = document.getElementById("luxury-packages");
             let adventurePackages = document.getElementById("adventure-packages");
@@ -106,7 +106,7 @@ xhr.onload = (() => {
             wildlifePackages.innerHTML = html4;
 
         }
-        else if (document.URL.endsWith("/collaborate/localguides.html")) {
+        else if (document.URL.endsWith("/localguides.html")) {
             let localGuideProfiles = document.getElementById("local-guides-container");
             let html = "";
 
@@ -126,7 +126,7 @@ xhr.onload = (() => {
             }
             localGuideProfiles.innerHTML = html;
         }
-        else if (document.URL.endsWith("/collaborate/travelplanner.html")) {
+        else if (document.URL.endsWith("/travelplanner.html")) {
             let reviewSlider = document.getElementById("review-slider");
             let html = "";
             for (key in obj.reviews) {
@@ -146,7 +146,7 @@ xhr.onload = (() => {
 xhr.send();
 
 // Form Validation
-if (document.URL.endsWith("/collaborate/travelplannerrequest.html")) {
+if (document.URL.endsWith("/travelplannerrequest.html")) {
     const userName = document.getElementById("name");
     const email = document.getElementById("email");
     const phone = document.getElementById("tel");
