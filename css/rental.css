@@ -1,0 +1,91 @@
+body,h1,h2,h3,h4,h5,h6 
+    {
+        font-family: "Raleway", Arial, Helvetica, sans-serif
+    }            
+.main
+    {
+        margin-left:100px;
+        margin-right: 50px;
+        padding: 20px;
+        display: flex;
+        
+    }
+.main h2
+    { 
+       
+        font-weight: bold;
+        color:#4CAF50;
+    }
+.main h4
+    {
+        margin-top: 20px;
+        font-size: large;
+        margin-left: 15px;
+        
+    }
+/*.abes
+    {
+        display: flex;
+        gap: 10px;
+    }
+.polaroid 
+    {        
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 25px;
+    }
+.polaroid img
+    {
+        box-shadow: 4px 0px 4px rgba(219, 32, 163, 0.87);
+        width: 100%;
+    }
+.container 
+    {
+        text-align: center;
+        padding: 10px 20px;
+        background-color:turquoise;
+        font-weight: 700;
+        box-shadow: 4px 4px 4px rgba(219, 32, 163, 0.87);
+    }*/
+input
+    {
+        background-color: rgb(88, 185, 88);
+        width: 200px;
+        height: 30px;
+        color: white;
+        text-align:  left;
+        margin-bottom: 10px;
+    }
+.b 
+    {
+        background-color: rgb(88, 185, 88);
+        width: 500px;
+        height: 30px;
+        color: white;
+        text-align: center;
+         margin-bottom: 20px;
+    }
+
+.display-container
+    {
+        position:relative;
+    }
+.display-bottomleft
+    {
+        position:absolute;
+        left:0;
+        bottom: -5px;
+        text-align: center;
+    }
+.display-bottomleft p
+    {
+        padding: 10px;
+        font-weight: bold;
+    }
+.black{color:#fff!important;background-color:#000!important}
+.section,.code{margin-top:16px!important;margin-bottom:16px!important}
+.cell-row:before,.cell-row:after,.clear:after,.clear:before,.bar:before,.bar:after{content:"";display:table;clear:both}
+.col{float:left;width:100%}
+.col.s3{width:24.99999%; margin-bottom: 25px;}
+.opacity,.hover-opacity:hover{opacity:0.60}.opacity-off,.hover-opacity-off:hover{opacity:1}
+.opacity-max{opacity:0.25}.opacity-min{opacity:0.75}
+.opacity-off,.hover-opacity-off:hover{opacity:1}
