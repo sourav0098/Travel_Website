@@ -10,27 +10,29 @@ function checkCred()
 {
   const loginUsername = document.getElementById('username');
   const loginpassword = document.getElementById('Loginpassword');
-  if(loginUsername.value="user" && loginpassword.value == "1234")
+  
+  if(loginUsername.value=="user" && loginpassword.value == "1234" )
   {
-    alert("Login Successful");
     flag=1
-    closeModal2();
+    modalmsgSuccess.style.display = "block";
   }
   else
   {
-    alert("Invalid Credentials");
+    modalmsg.style.display = "block";
   }
+  closeModal2();
 }
+
 //error
 function SignUpError()
 {
     if(flag==1)
     {
-      alert("You will receive a mail from our team shortly");
+      modalmsg3.style.display = "block";
     }
     else
     {
-    alert("Please Signup to Enquire");
+      modalmsg4.style.display = "block";
     }
 }
 let focusedElementBeforeModal;
@@ -313,4 +315,104 @@ function closePopup() {
   
 }
 
+// Get the modal
+var modalmsg = document.getElementById("modalmsg");
 
+// Get the button that opens the modal
+// var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var spanmsg = document.getElementsByClassName("closemsg")[0];
+
+// When the user clicks the button, open the modal 
+// btn.onclick = function() {
+//   modalmsg.style.display = "block";
+// }
+
+// When the user clicks on <span> (x), close the modal
+spanmsg.onclick = function() {
+  modalmsg.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modalmsg.style.display = "none";
+  }
+}
+// Get the modal
+var modalmsgSuccess = document.getElementById("modalmsgSuccess");
+
+// Get the button that opens the modal
+// var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var spanmsgSuccess = document.getElementsByClassName("closemsgSuccess")[0];
+
+// When the user clicks the button, open the modal 
+// btn.onclick = function() {
+//   modalmsg.style.display = "block";
+// }
+
+// When the user clicks on <span> (x), close the modal
+spanmsgSuccess.onclick = function() {
+  modalmsgSuccess.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modalmsgSuccess.style.display = "none";
+  }
+}
+
+// Get the modal
+var modalmsg3 = document.getElementById("modalmsg3");
+
+// Get the button that opens the modal
+// var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var spanmsg3 = document.getElementsByClassName("closemsg3")[0];
+
+// When the user clicks the button, open the modal 
+// btn.onclick = function() {
+//   modalmsg3.style.display = "block";
+// }
+
+// When the user clicks on <span> (x), close the modal
+spanmsg3.onclick = function() {
+  modalmsg3.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modalmsg3.style.display = "none";
+  }
+}
+// Get the modal
+var modalmsg4 = document.getElementById("modalmsg4");
+
+// Get the button that opens the modal
+// var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var spanmsg4 = document.getElementsByClassName("closemsg4")[0];
+
+// When the user clicks the button, open the modal 
+// btn.onclick = function() {
+//   modalmsg3.style.display = "block";
+// }
+
+// When the user clicks on <span> (x), close the modal
+spanmsg4.onclick = function() {
+  modalmsg4.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modalmsg4.style.display = "none";
+  }
+}

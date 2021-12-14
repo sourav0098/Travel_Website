@@ -14,6 +14,51 @@
     background-repeat: no-repeat;
     
   }
+  .modalmsg, .modalmsgSuccess,.modalmsg3,.modalmsg4 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modalmsg-content, .modalmsgSuccess-content,.modalmsg-content3,.modalmsg-content4 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 25px;
+  }
+  
+  /* The Close Button */
+  .closemsg, .closemsgSuccess, .closemsg3, .closemsg4 {
+    color: #aaaaaa;
+    margin-left: 400px;
+    margin-top: -20px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .closemsg:hover,
+  .closemsg:focus,.closemsgSuccess:hover,
+  .closemsgSuccess:focus,.closemsg3:hover,
+  .closemsg3:focus,.closemsg4:hover,
+  .closemsg4:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .invalidCred, .validCred, .Bookingmsg, .BookingError{
+    text-align: center;
+  }
   .custom-btn {
     width: 130px;
     height: 40px;
