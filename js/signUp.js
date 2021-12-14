@@ -14,7 +14,7 @@ function formValidation() {
     document.getElementById("error").innerHTML = "Name length should be more than 2 and less than 21 charaters";
     userName.focus();
     return false;
-  }   
+  }
   // checking email format
   if (!email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
     document.getElementById("error").innerHTML = "Please enter a valid email!";
@@ -27,29 +27,29 @@ function formValidation() {
     password.focus();
     return false;
   }
-    // checking reentered password is matching with the above entered password
-  if (! password2.value == password.value) {
-    document.getElementById("error").innerHTML =" Reentered Password Does not match ";
+  // checking reentered password is matching with the above entered password
+  if (!password2.value == password.value) {
+    document.getElementById("error").innerHTML = " Reentered Password Does not match ";
     password2.focus();
     return false;
   }
   // checking phone number
   if (!phoneNumber.value.match(/^[1-9][0-9]{9}$/)) {
-    document.getElementById("error").innerHTML ="Phone number must be 10 characters long number and first digit can't be 0!";
+    document.getElementById("error").innerHTML = "Phone number must be 10 characters long number and first digit can't be 0!";
     phoneNumber.focus();
     return false;
   }
   // checking gender
   if (gender.gender.value === "") {
-    document.getElementById("error").innerHTML ="Please select your gender!";
+    document.getElementById("error").innerHTML = "Please select your gender!";
     return false;
   }
   // checking zip code
-  if (!zipcode.value.match(/^[0-9]{6}$/) || zipcode.value=="") {
-    document.getElementById("error").innerHTML ="Zip code must be 6 characters long number!";
+  if (!zipcode.value.match(/^[0-9]{6}$/) || zipcode.value == "") {
+    document.getElementById("error").innerHTML = "Zip code must be 6 characters long number!";
     zipcode.focus();
     return false;
   }
-  document.getElementById("error").innerHTML ="Registration Successful";
+  document.getElementById("error").innerHTML = "Registration Successful";
   return true;
 }
