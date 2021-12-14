@@ -1,39 +1,33 @@
-flag=0;
+flag = 0;
 //opens the floating form
 function openForm() {
-  
+
   document.getElementById("LoginForm").style.display = "block";
-  
+
 }
 //checks the credentials
-function checkCred()
-{
+function checkCred() {
   const loginUsername = document.getElementById('username');
   const loginpassword = document.getElementById('Loginpassword');
-  
-  if(loginUsername.value=="user" && loginpassword.value == "1234" )
-  {
-    flag=1
+
+  if (loginUsername.value == "user" && loginpassword.value == "1234") {
+    flag = 1
     modalmsgSuccess.style.display = "block";
   }
-  else
-  {
+  else {
     modalmsg.style.display = "block";
   }
   closeModal2();
 }
 
 //error
-function SignUpError()
-{
-    if(flag==1)
-    {
-      modalmsg3.style.display = "block";
-    }
-    else
-    {
-      modalmsg4.style.display = "block";
-    }
+function SignUpError() {
+  if (flag == 1) {
+    modalmsg3.style.display = "block";
+  }
+  else {
+    modalmsg4.style.display = "block";
+  }
 }
 let focusedElementBeforeModal;
 const modal = document.getElementById('modal');
@@ -50,7 +44,7 @@ window.onload = () => {
   addReview.setAttribute('aria-label', 'add review');
   addReview.title = 'Add Review';
   addReview.addEventListener('click', openModal);
- 
+
 
 
   const addReview2 = document.getElementById('review-add-btn2');
@@ -59,8 +53,8 @@ window.onload = () => {
   addReview2.setAttribute('aria-label', 'add review');
   addReview2.title = 'Add Review';
   addReview2.addEventListener('click', openModal2);
-  
-} 
+
+}
 
 const openModal = () => {
   // Save current focus
@@ -68,7 +62,7 @@ const openModal = () => {
 
   // Listen for and trap the keyboard
   modal.addEventListener('keydown', trapTabKey);
-  
+
   // Listen for indicators to close the modal
   modalOverlay.addEventListener('click', closeModal);
   // Close btn
@@ -79,7 +73,7 @@ const openModal = () => {
   const form = document.getElementById('review-form');
   form.addEventListener('submit', submitAddReview, false);
 
-  
+
   // Find all focusable children
   var focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
   var focusableElements = modal.querySelectorAll(focusableElementsString);
@@ -109,7 +103,7 @@ const openModal = () => {
           lastTabStop.focus();
         }
 
-      // TAB
+        // TAB
       } else {
         if (document.activeElement === lastTabStop) {
           e.preventDefault();
@@ -132,7 +126,7 @@ const openModal2 = () => {
 
   // Listen for and trap the keyboard
   modal2.addEventListener('keydown', trapTabKey);
-  
+
   // Listen for indicators to close the modal
   modalOverlay2.addEventListener('click', closeModal2);
   // Close btn
@@ -143,7 +137,7 @@ const openModal2 = () => {
   const form2 = document.getElementById('review-form2');
   form2.addEventListener('submit', submitAddReview, false);
 
-  
+
   // Find all focusable children
   var focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
   var focusableElements = modal2.querySelectorAll(focusableElementsString);
@@ -173,7 +167,7 @@ const openModal2 = () => {
           lastTabStop.focus();
         }
 
-      // TAB
+        // TAB
       } else {
         if (document.activeElement === lastTabStop) {
           e.preventDefault();
@@ -217,7 +211,7 @@ const closeModal = () => {
 
 const closeModal2 = () => {
   // Hide the modal and overlay
-  
+
   modal2.classList.remove('show');
   modalOverlay2.classList.remove('show');
 
@@ -243,18 +237,18 @@ const setFocus = (evt) => {
 const navRadioGroup = (evt) => {
   // console.log('key', evt.key, 'code', evt.code, 'which', evt.which);
   // console.log(evt);
-  
-  const star1 = document.getElementById('star1');  
-  const star2 = document.getElementById('star2');  
-  const star3 = document.getElementById('star3');  
-  const star4 = document.getElementById('star4');  
-  const star5 = document.getElementById('star5');  
+
+  const star1 = document.getElementById('star1');
+  const star2 = document.getElementById('star2');
+  const star3 = document.getElementById('star3');
+  const star4 = document.getElementById('star4');
+  const star5 = document.getElementById('star5');
 
   if (['ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp'].includes(evt.key)) {
     evt.preventDefault();
     // console.log('attempting return');
     if (evt.key === 'ArrowRight' || evt.key === 'ArrowDown') {
-      switch(evt.target.id) {
+      switch (evt.target.id) {
         case 'star1':
           star2.focus();
           star2.checked = true;
@@ -277,7 +271,7 @@ const navRadioGroup = (evt) => {
           break;
       }
     } else if (evt.key === 'ArrowLeft' || evt.key === 'ArrowUp') {
-      switch(evt.target.id) {
+      switch (evt.target.id) {
         case 'star1':
           star5.focus();
           star5.checked = true;
@@ -303,16 +297,16 @@ const navRadioGroup = (evt) => {
   }
 };
 
-var dialog = document.getElementById( "popup" );
+var dialog = document.getElementById("popup");
 function show() {
-  
-  dialog.show ();
-  
+
+  dialog.show();
+
 }
 function closePopup() {
-  
-  dialog.close ();
-  
+
+  dialog.close();
+
 }
 
 // Get the modal
@@ -330,12 +324,12 @@ var spanmsg = document.getElementsByClassName("closemsg")[0];
 // }
 
 // When the user clicks on <span> (x), close the modal
-spanmsg.onclick = function() {
+spanmsg.onclick = function () {
   modalmsg.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modalmsg.style.display = "none";
   }
@@ -355,12 +349,12 @@ var spanmsgSuccess = document.getElementsByClassName("closemsgSuccess")[0];
 // }
 
 // When the user clicks on <span> (x), close the modal
-spanmsgSuccess.onclick = function() {
+spanmsgSuccess.onclick = function () {
   modalmsgSuccess.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modalmsgSuccess.style.display = "none";
   }
@@ -381,12 +375,12 @@ var spanmsg3 = document.getElementsByClassName("closemsg3")[0];
 // }
 
 // When the user clicks on <span> (x), close the modal
-spanmsg3.onclick = function() {
+spanmsg3.onclick = function () {
   modalmsg3.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modalmsg3.style.display = "none";
   }
@@ -406,12 +400,12 @@ var spanmsg4 = document.getElementsByClassName("closemsg4")[0];
 // }
 
 // When the user clicks on <span> (x), close the modal
-spanmsg4.onclick = function() {
+spanmsg4.onclick = function () {
   modalmsg4.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modalmsg4.style.display = "none";
   }
