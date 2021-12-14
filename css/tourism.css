@@ -465,7 +465,7 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 14px 29px;
+  padding: 14px 0px;
   min-width: 240px;
   width: 33%;
 }

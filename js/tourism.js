@@ -160,9 +160,8 @@ if (document.URL.endsWith("/travelplannerrequest.html")) {
     let validEndDate=false;
 
     userName.addEventListener("blur", () => {
-        let regex = /^[a-zA-Z ]{2,30}$/;
+        let regex = /^[a-zA-Z ]{2,40}$/;
         let str = userName.value;
-        console.log("hello");
         if (regex.test(str)) {
             userName.classList.remove("is-invalid");
             userName.classList.add("is-valid");
@@ -242,6 +241,8 @@ if (document.URL.endsWith("/travelplannerrequest.html")) {
             email.value = "";
             startDate.value="";
             endDate.value="";
+            document.getElementById("location").value="";
+            document.getElementById("message").value="";
         }
         else {
             alert.classList.add("show");
