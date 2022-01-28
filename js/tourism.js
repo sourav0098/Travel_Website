@@ -1,8 +1,8 @@
+// Hamburger Menu
 const menuBtn = document.querySelector(".menu-btn");
 const navBar = document.querySelector(".navbar-bottom");
 const faqs = document.querySelectorAll(".faq");
 
-// Hamburger Menu
 let menuOpen = false;
 
 menuBtn.addEventListener("click", () => {
@@ -17,6 +17,7 @@ menuBtn.addEventListener("click", () => {
     navBar.classList.toggle("open");
 });
 
+// FAQ
 faqs.forEach(faq => {
     faq.addEventListener("click", () => {
         faq.classList.toggle("active");
